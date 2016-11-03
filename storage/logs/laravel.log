@@ -1,0 +1,300 @@
+[2016-11-03 12:28:23] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/Applications/XAMPP/xamppfiles/htdocs/eshop/bootstrap/cache/services.php): failed to open stream: Permission denied' in /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/Applications/X...', 111, Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/Applications/X...', '<?php return ar...', 0)
+#2 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(190): Illuminate\Filesystem\Filesystem->put('/Applications/X...', '<?php return ar...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(135): Illuminate\Foundation\ProviderRepository->writeManifest(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(60): Illuminate\Foundation\ProviderRepository->compileManifest(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(540): Illuminate\Foundation\ProviderRepository->load(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(17): Illuminate\Foundation\Application->registerConfiguredProviders()
+#7 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(203): Illuminate\Foundation\Bootstrap\RegisterProviders->bootstrap(Object(Illuminate\Foundation\Application))
+#8 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(253): Illuminate\Foundation\Application->bootstrapWith(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#11 /Applications/XAMPP/xamppfiles/htdocs/eshop/public/index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#12 {main}  
+[2016-11-03 12:57:59] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/Applications/XAMPP/xamppfiles/htdocs/eshop/bootstrap/cache/services.php): failed to open stream: Permission denied' in /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/Applications/X...', 111, Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/Applications/X...', '<?php return ar...', 0)
+#2 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(190): Illuminate\Filesystem\Filesystem->put('/Applications/X...', '<?php return ar...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(135): Illuminate\Foundation\ProviderRepository->writeManifest(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(60): Illuminate\Foundation\ProviderRepository->compileManifest(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(540): Illuminate\Foundation\ProviderRepository->load(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(17): Illuminate\Foundation\Application->registerConfiguredProviders()
+#7 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(203): Illuminate\Foundation\Bootstrap\RegisterProviders->bootstrap(Object(Illuminate\Foundation\Application))
+#8 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(253): Illuminate\Foundation\Application->bootstrapWith(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#11 /Applications/XAMPP/xamppfiles/htdocs/eshop/public/index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#12 {main}  
+[2016-11-03 12:58:21] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/Applications/XAMPP/xamppfiles/htdocs/eshop/bootstrap/cache/services.php): failed to open stream: Permission denied' in /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/Applications/X...', 111, Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/Applications/X...', '<?php return ar...', 0)
+#2 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(190): Illuminate\Filesystem\Filesystem->put('/Applications/X...', '<?php return ar...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(135): Illuminate\Foundation\ProviderRepository->writeManifest(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(60): Illuminate\Foundation\ProviderRepository->compileManifest(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(540): Illuminate\Foundation\ProviderRepository->load(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(17): Illuminate\Foundation\Application->registerConfiguredProviders()
+#7 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(203): Illuminate\Foundation\Bootstrap\RegisterProviders->bootstrap(Object(Illuminate\Foundation\Application))
+#8 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(253): Illuminate\Foundation\Application->bootstrapWith(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#11 /Applications/XAMPP/xamppfiles/htdocs/eshop/public/index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#12 {main}  
+[2016-11-03 12:58:22] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/Applications/XAMPP/xamppfiles/htdocs/eshop/bootstrap/cache/services.php): failed to open stream: Permission denied' in /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/Applications/X...', 111, Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/Applications/X...', '<?php return ar...', 0)
+#2 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(190): Illuminate\Filesystem\Filesystem->put('/Applications/X...', '<?php return ar...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(135): Illuminate\Foundation\ProviderRepository->writeManifest(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(60): Illuminate\Foundation\ProviderRepository->compileManifest(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(540): Illuminate\Foundation\ProviderRepository->load(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(17): Illuminate\Foundation\Application->registerConfiguredProviders()
+#7 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(203): Illuminate\Foundation\Bootstrap\RegisterProviders->bootstrap(Object(Illuminate\Foundation\Application))
+#8 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(253): Illuminate\Foundation\Application->bootstrapWith(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#11 /Applications/XAMPP/xamppfiles/htdocs/eshop/public/index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#12 {main}  
+[2016-11-03 12:58:22] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/Applications/XAMPP/xamppfiles/htdocs/eshop/bootstrap/cache/services.php): failed to open stream: Permission denied' in /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/Applications/X...', 111, Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/Applications/X...', '<?php return ar...', 0)
+#2 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(190): Illuminate\Filesystem\Filesystem->put('/Applications/X...', '<?php return ar...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(135): Illuminate\Foundation\ProviderRepository->writeManifest(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(60): Illuminate\Foundation\ProviderRepository->compileManifest(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(540): Illuminate\Foundation\ProviderRepository->load(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(17): Illuminate\Foundation\Application->registerConfiguredProviders()
+#7 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(203): Illuminate\Foundation\Bootstrap\RegisterProviders->bootstrap(Object(Illuminate\Foundation\Application))
+#8 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(253): Illuminate\Foundation\Application->bootstrapWith(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#11 /Applications/XAMPP/xamppfiles/htdocs/eshop/public/index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#12 {main}  
+[2016-11-03 12:58:23] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/Applications/XAMPP/xamppfiles/htdocs/eshop/bootstrap/cache/services.php): failed to open stream: Permission denied' in /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/Applications/X...', 111, Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/Applications/X...', '<?php return ar...', 0)
+#2 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(190): Illuminate\Filesystem\Filesystem->put('/Applications/X...', '<?php return ar...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(135): Illuminate\Foundation\ProviderRepository->writeManifest(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(60): Illuminate\Foundation\ProviderRepository->compileManifest(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(540): Illuminate\Foundation\ProviderRepository->load(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(17): Illuminate\Foundation\Application->registerConfiguredProviders()
+#7 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(203): Illuminate\Foundation\Bootstrap\RegisterProviders->bootstrap(Object(Illuminate\Foundation\Application))
+#8 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(253): Illuminate\Foundation\Application->bootstrapWith(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#11 /Applications/XAMPP/xamppfiles/htdocs/eshop/public/index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#12 {main}  
+[2016-11-03 12:58:23] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/Applications/XAMPP/xamppfiles/htdocs/eshop/bootstrap/cache/services.php): failed to open stream: Permission denied' in /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/Applications/X...', 111, Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/Applications/X...', '<?php return ar...', 0)
+#2 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(190): Illuminate\Filesystem\Filesystem->put('/Applications/X...', '<?php return ar...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(135): Illuminate\Foundation\ProviderRepository->writeManifest(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(60): Illuminate\Foundation\ProviderRepository->compileManifest(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(540): Illuminate\Foundation\ProviderRepository->load(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(17): Illuminate\Foundation\Application->registerConfiguredProviders()
+#7 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(203): Illuminate\Foundation\Bootstrap\RegisterProviders->bootstrap(Object(Illuminate\Foundation\Application))
+#8 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(253): Illuminate\Foundation\Application->bootstrapWith(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#11 /Applications/XAMPP/xamppfiles/htdocs/eshop/public/index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#12 {main}  
+[2016-11-03 12:58:23] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/Applications/XAMPP/xamppfiles/htdocs/eshop/bootstrap/cache/services.php): failed to open stream: Permission denied' in /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/Applications/X...', 111, Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/Applications/X...', '<?php return ar...', 0)
+#2 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(190): Illuminate\Filesystem\Filesystem->put('/Applications/X...', '<?php return ar...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(135): Illuminate\Foundation\ProviderRepository->writeManifest(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(60): Illuminate\Foundation\ProviderRepository->compileManifest(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(540): Illuminate\Foundation\ProviderRepository->load(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(17): Illuminate\Foundation\Application->registerConfiguredProviders()
+#7 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(203): Illuminate\Foundation\Bootstrap\RegisterProviders->bootstrap(Object(Illuminate\Foundation\Application))
+#8 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(253): Illuminate\Foundation\Application->bootstrapWith(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#11 /Applications/XAMPP/xamppfiles/htdocs/eshop/public/index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#12 {main}  
+[2016-11-03 12:58:23] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/Applications/XAMPP/xamppfiles/htdocs/eshop/bootstrap/cache/services.php): failed to open stream: Permission denied' in /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/Applications/X...', 111, Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/Applications/X...', '<?php return ar...', 0)
+#2 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(190): Illuminate\Filesystem\Filesystem->put('/Applications/X...', '<?php return ar...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(135): Illuminate\Foundation\ProviderRepository->writeManifest(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(60): Illuminate\Foundation\ProviderRepository->compileManifest(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(540): Illuminate\Foundation\ProviderRepository->load(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(17): Illuminate\Foundation\Application->registerConfiguredProviders()
+#7 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(203): Illuminate\Foundation\Bootstrap\RegisterProviders->bootstrap(Object(Illuminate\Foundation\Application))
+#8 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(253): Illuminate\Foundation\Application->bootstrapWith(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#11 /Applications/XAMPP/xamppfiles/htdocs/eshop/public/index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#12 {main}  
+[2016-11-03 12:58:24] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/Applications/XAMPP/xamppfiles/htdocs/eshop/bootstrap/cache/services.php): failed to open stream: Permission denied' in /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/Applications/X...', 111, Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/Applications/X...', '<?php return ar...', 0)
+#2 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(190): Illuminate\Filesystem\Filesystem->put('/Applications/X...', '<?php return ar...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(135): Illuminate\Foundation\ProviderRepository->writeManifest(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(60): Illuminate\Foundation\ProviderRepository->compileManifest(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(540): Illuminate\Foundation\ProviderRepository->load(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(17): Illuminate\Foundation\Application->registerConfiguredProviders()
+#7 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(203): Illuminate\Foundation\Bootstrap\RegisterProviders->bootstrap(Object(Illuminate\Foundation\Application))
+#8 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(253): Illuminate\Foundation\Application->bootstrapWith(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#11 /Applications/XAMPP/xamppfiles/htdocs/eshop/public/index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#12 {main}  
+[2016-11-03 12:58:24] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/Applications/XAMPP/xamppfiles/htdocs/eshop/bootstrap/cache/services.php): failed to open stream: Permission denied' in /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/Applications/X...', 111, Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/Applications/X...', '<?php return ar...', 0)
+#2 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(190): Illuminate\Filesystem\Filesystem->put('/Applications/X...', '<?php return ar...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(135): Illuminate\Foundation\ProviderRepository->writeManifest(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(60): Illuminate\Foundation\ProviderRepository->compileManifest(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(540): Illuminate\Foundation\ProviderRepository->load(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(17): Illuminate\Foundation\Application->registerConfiguredProviders()
+#7 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(203): Illuminate\Foundation\Bootstrap\RegisterProviders->bootstrap(Object(Illuminate\Foundation\Application))
+#8 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(253): Illuminate\Foundation\Application->bootstrapWith(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#11 /Applications/XAMPP/xamppfiles/htdocs/eshop/public/index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#12 {main}  
+[2016-11-03 12:58:24] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/Applications/XAMPP/xamppfiles/htdocs/eshop/bootstrap/cache/services.php): failed to open stream: Permission denied' in /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/Applications/X...', 111, Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/Applications/X...', '<?php return ar...', 0)
+#2 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(190): Illuminate\Filesystem\Filesystem->put('/Applications/X...', '<?php return ar...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(135): Illuminate\Foundation\ProviderRepository->writeManifest(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(60): Illuminate\Foundation\ProviderRepository->compileManifest(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(540): Illuminate\Foundation\ProviderRepository->load(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(17): Illuminate\Foundation\Application->registerConfiguredProviders()
+#7 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(203): Illuminate\Foundation\Bootstrap\RegisterProviders->bootstrap(Object(Illuminate\Foundation\Application))
+#8 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(253): Illuminate\Foundation\Application->bootstrapWith(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#11 /Applications/XAMPP/xamppfiles/htdocs/eshop/public/index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#12 {main}  
+[2016-11-03 12:58:24] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/Applications/XAMPP/xamppfiles/htdocs/eshop/bootstrap/cache/services.php): failed to open stream: Permission denied' in /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/Applications/X...', 111, Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/Applications/X...', '<?php return ar...', 0)
+#2 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(190): Illuminate\Filesystem\Filesystem->put('/Applications/X...', '<?php return ar...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(135): Illuminate\Foundation\ProviderRepository->writeManifest(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(60): Illuminate\Foundation\ProviderRepository->compileManifest(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(540): Illuminate\Foundation\ProviderRepository->load(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(17): Illuminate\Foundation\Application->registerConfiguredProviders()
+#7 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(203): Illuminate\Foundation\Bootstrap\RegisterProviders->bootstrap(Object(Illuminate\Foundation\Application))
+#8 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(253): Illuminate\Foundation\Application->bootstrapWith(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#11 /Applications/XAMPP/xamppfiles/htdocs/eshop/public/index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#12 {main}  
+[2016-11-03 12:58:25] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/Applications/XAMPP/xamppfiles/htdocs/eshop/bootstrap/cache/services.php): failed to open stream: Permission denied' in /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/Applications/X...', 111, Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/Applications/X...', '<?php return ar...', 0)
+#2 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(190): Illuminate\Filesystem\Filesystem->put('/Applications/X...', '<?php return ar...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(135): Illuminate\Foundation\ProviderRepository->writeManifest(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(60): Illuminate\Foundation\ProviderRepository->compileManifest(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(540): Illuminate\Foundation\ProviderRepository->load(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(17): Illuminate\Foundation\Application->registerConfiguredProviders()
+#7 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(203): Illuminate\Foundation\Bootstrap\RegisterProviders->bootstrap(Object(Illuminate\Foundation\Application))
+#8 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(253): Illuminate\Foundation\Application->bootstrapWith(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#11 /Applications/XAMPP/xamppfiles/htdocs/eshop/public/index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#12 {main}  
+[2016-11-03 12:58:25] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/Applications/XAMPP/xamppfiles/htdocs/eshop/bootstrap/cache/services.php): failed to open stream: Permission denied' in /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/Applications/X...', 111, Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/Applications/X...', '<?php return ar...', 0)
+#2 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(190): Illuminate\Filesystem\Filesystem->put('/Applications/X...', '<?php return ar...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(135): Illuminate\Foundation\ProviderRepository->writeManifest(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(60): Illuminate\Foundation\ProviderRepository->compileManifest(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(540): Illuminate\Foundation\ProviderRepository->load(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(17): Illuminate\Foundation\Application->registerConfiguredProviders()
+#7 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(203): Illuminate\Foundation\Bootstrap\RegisterProviders->bootstrap(Object(Illuminate\Foundation\Application))
+#8 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(253): Illuminate\Foundation\Application->bootstrapWith(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#11 /Applications/XAMPP/xamppfiles/htdocs/eshop/public/index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#12 {main}  
+[2016-11-03 12:58:25] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/Applications/XAMPP/xamppfiles/htdocs/eshop/bootstrap/cache/services.php): failed to open stream: Permission denied' in /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/Applications/X...', 111, Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/Applications/X...', '<?php return ar...', 0)
+#2 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(190): Illuminate\Filesystem\Filesystem->put('/Applications/X...', '<?php return ar...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(135): Illuminate\Foundation\ProviderRepository->writeManifest(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(60): Illuminate\Foundation\ProviderRepository->compileManifest(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(540): Illuminate\Foundation\ProviderRepository->load(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(17): Illuminate\Foundation\Application->registerConfiguredProviders()
+#7 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(203): Illuminate\Foundation\Bootstrap\RegisterProviders->bootstrap(Object(Illuminate\Foundation\Application))
+#8 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(253): Illuminate\Foundation\Application->bootstrapWith(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#11 /Applications/XAMPP/xamppfiles/htdocs/eshop/public/index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#12 {main}  
+[2016-11-03 12:58:25] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/Applications/XAMPP/xamppfiles/htdocs/eshop/bootstrap/cache/services.php): failed to open stream: Permission denied' in /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/Applications/X...', 111, Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/Applications/X...', '<?php return ar...', 0)
+#2 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(190): Illuminate\Filesystem\Filesystem->put('/Applications/X...', '<?php return ar...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(135): Illuminate\Foundation\ProviderRepository->writeManifest(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(60): Illuminate\Foundation\ProviderRepository->compileManifest(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(540): Illuminate\Foundation\ProviderRepository->load(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(17): Illuminate\Foundation\Application->registerConfiguredProviders()
+#7 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(203): Illuminate\Foundation\Bootstrap\RegisterProviders->bootstrap(Object(Illuminate\Foundation\Application))
+#8 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(253): Illuminate\Foundation\Application->bootstrapWith(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#11 /Applications/XAMPP/xamppfiles/htdocs/eshop/public/index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#12 {main}  
+[2016-11-03 12:58:26] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/Applications/XAMPP/xamppfiles/htdocs/eshop/bootstrap/cache/services.php): failed to open stream: Permission denied' in /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/Applications/X...', 111, Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/Applications/X...', '<?php return ar...', 0)
+#2 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(190): Illuminate\Filesystem\Filesystem->put('/Applications/X...', '<?php return ar...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(135): Illuminate\Foundation\ProviderRepository->writeManifest(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(60): Illuminate\Foundation\ProviderRepository->compileManifest(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(540): Illuminate\Foundation\ProviderRepository->load(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(17): Illuminate\Foundation\Application->registerConfiguredProviders()
+#7 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(203): Illuminate\Foundation\Bootstrap\RegisterProviders->bootstrap(Object(Illuminate\Foundation\Application))
+#8 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(253): Illuminate\Foundation\Application->bootstrapWith(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#11 /Applications/XAMPP/xamppfiles/htdocs/eshop/public/index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#12 {main}  
+[2016-11-03 12:58:26] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/Applications/XAMPP/xamppfiles/htdocs/eshop/bootstrap/cache/services.php): failed to open stream: Permission denied' in /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/Applications/X...', 111, Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/Applications/X...', '<?php return ar...', 0)
+#2 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(190): Illuminate\Filesystem\Filesystem->put('/Applications/X...', '<?php return ar...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(135): Illuminate\Foundation\ProviderRepository->writeManifest(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(60): Illuminate\Foundation\ProviderRepository->compileManifest(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(540): Illuminate\Foundation\ProviderRepository->load(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(17): Illuminate\Foundation\Application->registerConfiguredProviders()
+#7 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(203): Illuminate\Foundation\Bootstrap\RegisterProviders->bootstrap(Object(Illuminate\Foundation\Application))
+#8 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(253): Illuminate\Foundation\Application->bootstrapWith(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#11 /Applications/XAMPP/xamppfiles/htdocs/eshop/public/index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#12 {main}  
+[2016-11-03 12:58:26] local.ERROR: exception 'ErrorException' with message 'file_put_contents(/Applications/XAMPP/xamppfiles/htdocs/eshop/bootstrap/cache/services.php): failed to open stream: Permission denied' in /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:111
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'file_put_conten...', '/Applications/X...', 111, Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(111): file_put_contents('/Applications/X...', '<?php return ar...', 0)
+#2 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(190): Illuminate\Filesystem\Filesystem->put('/Applications/X...', '<?php return ar...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(135): Illuminate\Foundation\ProviderRepository->writeManifest(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php(60): Illuminate\Foundation\ProviderRepository->compileManifest(Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(540): Illuminate\Foundation\ProviderRepository->load(Array)
+#6 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/RegisterProviders.php(17): Illuminate\Foundation\Application->registerConfiguredProviders()
+#7 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(203): Illuminate\Foundation\Bootstrap\RegisterProviders->bootstrap(Object(Illuminate\Foundation\Application))
+#8 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(253): Illuminate\Foundation\Application->bootstrapWith(Array)
+#9 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\Foundation\Http\Kernel->bootstrap()
+#10 /Applications/XAMPP/xamppfiles/htdocs/eshop/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#11 /Applications/XAMPP/xamppfiles/htdocs/eshop/public/index.php(54): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#12 {main}  
