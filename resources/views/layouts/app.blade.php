@@ -74,7 +74,9 @@
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
+                            
                                     <li>
+                                     <a href="{{ url('/profile') }}"><i class="fa fa-btn fa-user"></i>Profile</a>
                                         <a href="{{ url('/logout') }}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -83,10 +85,8 @@
                                         <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
                                             {{ csrf_field() }}
                                         </form>
-
-
-                                        <a href="{{url('/perfil')}} ">Perfil</a>
                                     </li>
+                                    
                                 </ul>
                             </li>
                         @endif
