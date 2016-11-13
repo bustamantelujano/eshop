@@ -1,15 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
+<?php $__env->startSection('content'); ?>
+
+
+<head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>CompraEnCVA</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
+        
         <!-- Styles -->
         <style>
             html, body {
@@ -66,16 +66,7 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            <?php if(Route::has('login')): ?>
-                <div class="top-right links">
-                    <?php if(Auth::check()): ?>
-                        <a href="<?php echo e(url('/home')); ?>">Home</a>
-                    <?php else: ?>
-                        <a href="<?php echo e(url('/login')); ?>">Login</a>
-                        <a href="<?php echo e(url('/register')); ?>">Register</a>
-                    <?php endif; ?>
-                </div>
-            <?php endif; ?>
+ 
 
             <div class="content">
                 <div class="title m-b-md">
@@ -91,5 +82,5 @@
                 </div>
             </div>
         </div>
-    </body>
-</html>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

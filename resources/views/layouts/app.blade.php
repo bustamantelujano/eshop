@@ -11,7 +11,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'CompraEnCVA') }}</title>
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
@@ -51,7 +51,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                       CVAshop
                     </a>
                 </div>
 
@@ -65,8 +65,8 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
-                            <li><a href="{{ url('/login') }}">Login</a></li>
-                            <li><a href="{{ url('/register') }}">Register</a></li>
+                            <li><a href="{{ url('/login') }}">Iniciar Sesión</a></li>
+                            <li><a href="{{ url('/register') }}">Regístrate</a></li>
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="position:relative; padding-left:50px;">
@@ -77,11 +77,11 @@
                                 <ul class="dropdown-menu" role="menu">
                             
                                     <li>
-                                     <a href="{{ url('/profile') }}"><i class="fa fa-btn fa-user"></i>Profile</a>
+                                     <a href="{{ url('/profile') }}"><i class="fa fa-btn fa-user"></i>Mi Perfil</a>
                                         <a href="{{ url('/logout') }}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                            Logout
+                                            Cerrar Sesión
                                         </a>
                                         <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
                                             {{ csrf_field() }}
@@ -103,4 +103,7 @@
     <!-- Scripts -->
     <script src="/js/app.js"></script>
 </body>
-</html>
+<footer>
+        <hr>
+        <div class="text-center">Ingeniería Web &copy; 2016</div>
+    </footer></html>

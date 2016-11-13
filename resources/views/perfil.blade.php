@@ -6,30 +6,30 @@ integrity="sha384-Wrgq82RsEean5tP3NK3zWAemiNEXofJsTwTyHmNb/iL3dP/sZJ4+7sOld1uqYJ
 <section>
 
 <div class="container" style="margin-top: 30px;">
-<div class="profile-head">
-<div class="col-md- col-sm-4 col-xs-12">
-<img src="/Users/alexis/Desktop/alexis.jpg" class="img-responsive" />
-<h6>Alexis Manjarrez</h6>
-</div><!--col-md-4 col-sm-4 col-xs-12 close-->
-<div class="col-md-5 col-sm-5 col-xs-12">
-<h5>Alexis Manjarrez</h5>
-<p>Ingeniero Sistemas</p>
-<ul>
-<li><span class="glyphicon glyphicon-briefcase"></span> 2 Años</li>
-<li><span class="glyphicon glyphicon-map-marker"></span> México</li>
-<li><span class="glyphicon glyphicon-home"></span> Cerro Mautal #2986 Col. Lomalinda</li>
-<li><span class="glyphicon glyphicon-phone"></span> <a href="#" title="call">(667)7-55-58-67</a></li>
-<li><span class="glyphicon glyphicon-envelope"></span><a href="#" title="mail">aleexiis26@gmail.com</a></li>
+  <div class="profile-head">
+    <div class="col-md- col-sm-4 col-xs-12">
+      <img src="/Users/alexis/Desktop/alexis.jpg" class="img-responsive" />
+      <h6>Alexis Manjarrez</h6>
+      </div><!--col-md-4 col-sm-4 col-xs-12 close-->
+      <div class="col-md-5 col-sm-5 col-xs-12">
+      <h5>Alexis Manjarrez</h5>
+      <p>Ingeniero Sistemas</p>
+      <ul>
+        <li><span class="glyphicon glyphicon-briefcase"></span> 2 Años</li>
+        <li><span class="glyphicon glyphicon-map-marker"></span> México</li>
+        <li><span class="glyphicon glyphicon-home"></span> Cerro Mautal #2986 Col. Lomalinda</li>
+        <li><span class="glyphicon glyphicon-phone"></span> <a href="#" title="call">(667)7-55-58-67</a></li>
+        <li><span class="glyphicon glyphicon-envelope"></span><a href="#" title="mail">aleexiis26@gmail.com</a></li>
 
-</ul>
-
-
-</div><!--col-md-8 col-sm-8 col-xs-12 close-->
+      </ul>
 
 
+    </div><!--col-md-8 col-sm-8 col-xs-12 close-->
 
 
-</div><!--profile-head close-->
+
+
+    </div><!--profile-head close-->
 </div><!--container close-->
 
 

@@ -26,4 +26,25 @@ class UserController extends Controller
     	}
     	return view('profile', array('user' => Auth::user()) );
     }
+        public function editprofile(){
+        return view ('/editprofile', array('user' => Auth::user()));
+    }
+
+    public function update_datos(Request $request){
+        $user = Auth::user();
+        
+        $user->name = $request->input('nombre');
+        $user->email = $request->input('email');
+        $user->telefono = $request->input('telefono');
+
+        $user->direccion = $request->input('direccion');
+        $user->numdireccionint = $request->input('numintdireccion');
+        $user->ciudad = $request->input('ciudad');
+        $user->estado = $request->input('estado');
+
+        $user->save();
+        
+        return view('profile', array('user' => Auth::user()) );
+    }
+
 }

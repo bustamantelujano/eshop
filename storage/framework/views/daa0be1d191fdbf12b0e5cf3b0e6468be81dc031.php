@@ -11,7 +11,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
 
-    <title><?php echo e(config('app.name', 'Laravel')); ?></title>
+    <title><?php echo e(config('app.name', 'CompraEnCVA')); ?></title>
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
@@ -51,8 +51,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="<?php echo e(url('/')); ?>">
-                        <?php echo e(config('app.name', 'Laravel')); ?>
-
+                       CVAshop
                     </a>
                 </div>
 
@@ -66,27 +65,30 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         <?php if(Auth::guest()): ?>
-                            <li><a href="<?php echo e(url('/login')); ?>">Login</a></li>
-                            <li><a href="<?php echo e(url('/register')); ?>">Register</a></li>
+                            <li><a href="<?php echo e(url('/login')); ?>">Iniciar Sesión</a></li>
+                            <li><a href="<?php echo e(url('/register')); ?>">Regístrate</a></li>
                         <?php else: ?>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="position:relative; padding-left:50px;">
+                                    <img src="/uploads/avatars/<?php echo e(Auth::user()->avatar); ?>" style="width:32px; height:32px; position:absolute; top:10px; left:10px; border-radius:50%;">
                                     <?php echo e(Auth::user()->name); ?> <span class="caret"></span>
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
+                            
                                     <li>
+                                     <a href="<?php echo e(url('/profile')); ?>"><i class="fa fa-btn fa-user"></i>Mi Perfil</a>
                                         <a href="<?php echo e(url('/logout')); ?>"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                            Logout
+                                            Cerrar Sesión
                                         </a>
-
                                         <form id="logout-form" action="<?php echo e(url('/logout')); ?>" method="POST" style="display: none;">
                                             <?php echo e(csrf_field()); ?>
 
                                         </form>
                                     </li>
+                                    
                                 </ul>
                             </li>
                         <?php endif; ?>
@@ -102,4 +104,7 @@
     <!-- Scripts -->
     <script src="/js/app.js"></script>
 </body>
-</html>
+<footer>
+        <hr>
+        <div class="text-center">Ingeniería Web &copy; 2016</div>
+    </footer></html>
