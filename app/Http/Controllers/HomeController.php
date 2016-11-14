@@ -1,9 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\productos;
 
 use Illuminate\Http\Request;
-
+use DB;
 class HomeController extends Controller
 {
     /**
@@ -23,8 +24,16 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $productos=DB::table('productos')->paginate(20);
+        return view('welcome', compact('productos'));
     }
+
+    public function consultar(){
+        $usuarios=DB::table('usuarios')->paginate(20);
+        return view('consultarUsuarios', compact('usuarios'));
+    }
+
+
     public function perfils()
     {
         return view('perfil');

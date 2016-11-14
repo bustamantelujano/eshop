@@ -36,6 +36,29 @@ class CreateUsersTable extends Migration
             $table->string('precioitem');
           
         });
+        Schema::create('productos', function (Blueprint $table) {
+
+            $table->string('clave');
+            $table->string('codigo_fabricante');
+            $table->string('descripcion');
+            $table->string('grupo');
+            $table->string('marca');
+            $table->string('garantia');
+            $table->string('clase');
+            $table->string('disponible');
+            $table->string('precio');
+            $table->string('moneda');
+            $table->string('ficha_tecnica');
+            $table->string('ficha_comercial');
+            $table->string('imagen');       
+            
+          
+        });
+
+
+
+
+
     }
 
     /**

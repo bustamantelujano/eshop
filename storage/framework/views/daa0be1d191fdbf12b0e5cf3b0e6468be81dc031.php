@@ -37,6 +37,8 @@
 </head>
 <body>
     <div id="app">
+
+    
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
@@ -62,6 +64,10 @@
                     </ul>
 
                     <!-- Right Side Of Navbar -->
+
+                    <ul class="nav navbar-nav navbar-right">
+                    <li><a href="<?php echo e(url('/carrito')); ?>">Compras <i class="glyphicon glyphicon-shopping-cart"></i></li></a>
+
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         <?php if(Auth::guest()): ?>
@@ -77,18 +83,18 @@
                                 <ul class="dropdown-menu" role="menu">
                             
                                     <li>
-                                     <a href="<?php echo e(url('/profile')); ?>"><i class="fa fa-btn fa-user"></i>Mi Perfil</a>
+                                     <a href="<?php echo e(url('/profile')); ?>"><i class="glyphicon glyphicon-user"></i> Mi Perfil</a>
                                         <a href="<?php echo e(url('/logout')); ?>"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                            Cerrar Sesión
+                                            <i class="glyphicon glyphicon-off"></i> Cerrar Sesión
                                         </a>
                                         <form id="logout-form" action="<?php echo e(url('/logout')); ?>" method="POST" style="display: none;">
                                             <?php echo e(csrf_field()); ?>
 
                                         </form>
                                     </li>
-                                    
+                                   
                                 </ul>
                             </li>
                         <?php endif; ?>
