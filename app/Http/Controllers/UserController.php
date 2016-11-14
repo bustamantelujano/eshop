@@ -47,4 +47,17 @@ class UserController extends Controller
         return view('profile', array('user' => Auth::user()) );
     }
 
+    public function carrito()
+    {
+        return view ('/carrito', array('user' => Auth::user()));
+    }
+
+    public function addCarrito(request $request){
+        $carrito = Auth::carrito();
+        $carrito->id = $request->input('id');
+
+        return view ('/carrito', array('user' => Auth::user()));
+    }
+
+
 }

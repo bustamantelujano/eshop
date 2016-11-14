@@ -26,3 +26,8 @@ Route::post('/profile','UserController@update_avatar');
 Route::get('/editprofile', 'UserController@editprofile');
 
 Route::post('/editprofile','UserController@update_datos');
+
+
+Route::get('/carrito', 'UserController@carrito');
+
+Route::post('/carrito', 'UserController@addCarrito');

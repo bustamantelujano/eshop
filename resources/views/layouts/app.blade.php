@@ -62,6 +62,10 @@
                     </ul>
 
                     <!-- Right Side Of Navbar -->
+
+                    <ul class="nav navbar-nav navbar-right">
+                    <li><a href="{{ url('/carrito') }}">Compras <i class="glyphicon glyphicon-shopping-cart"></i></li></a>
+
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
@@ -77,17 +81,17 @@
                                 <ul class="dropdown-menu" role="menu">
                             
                                     <li>
-                                     <a href="{{ url('/profile') }}"><i class="fa fa-btn fa-user"></i>Mi Perfil</a>
+                                     <a href="{{ url('/profile') }}"><i class="glyphicon glyphicon-user"></i> Mi Perfil</a>
                                         <a href="{{ url('/logout') }}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                            Cerrar Sesión
+                                            <i class="glyphicon glyphicon-off"></i> Cerrar Sesión
                                         </a>
                                         <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
                                             {{ csrf_field() }}
                                         </form>
                                     </li>
-                                    
+                                   
                                 </ul>
                             </li>
                         @endif
