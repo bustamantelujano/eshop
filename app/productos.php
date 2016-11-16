@@ -6,14 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class productos extends Model
 {
-    //
-	use Notifiable;
+    
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-
     protected $fillable = [
         'clave',
         'codigo_fabricante'	,
