@@ -1,8 +1,5 @@
 <?php
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Auth::routes();
 
@@ -21,30 +18,33 @@ Route::get('/carrito', 'UserController@carrito');
 
 Route::post('/carrito', 'UserController@addCarrito');
 
+Route::get('/detalle/{clave}','ProductosController@detalleProducto');
 
-/*
+
 Route::get('/',[
-	'uses' => 'ProductosController@getIndex',
+	'uses' => 'HomeController@index',
 	'as' => 'producto.index'
 	]);
-*/
-Route::get('/agregarCarrito/{id}',[
-	'uses' => 'ProductosController@getAgregaCarrito',
-	'as' => 'producto.agregaCarrito'
-	]);
+Route::get('addToCart/{id}','ProductosController@addToCart');
 
-Route::get('/compra-carrito',[
-	'uses' => 'ProductosController@getCarrito',
-	'as' => 'producto.compraCarrito'
-	]);
+Route::get('/agregarCarrito/{id}',['uses' => 'ProductosController@getAgregaCarrito','as' => 'producto.agregaCarrito']);
 
-Route::get('/remove/{id}', [
-    'uses' => 'ProductosController@getRemoveItem',
-    'as' => 'product.remove'
+Route::get('/compra-carrito',['uses' => 'ProductosController@getCarrito','as' => 'producto.compraCarrito']);
+
+Route::get('/remove/{id}', ['uses' => 'ProductosController@getRemoveItem','as' => 'producto.remove']);
+
+Route::get('/reduce/{id}', ['uses' => 'ProductosController@getReduceByOne','as' => 'producto.reduceByOne']);
+
+
+Route::get('/checkout', [
+    'uses' => 'ProductosController@getCheckout',
+    'as' => 'checkout',
+    'middleware' => 'auth'
 ]);
 
-
-Route::get('/reduce/{id}', [
-    'uses' => 'ProductosController@getReduceByOne',
-    'as' => 'product.reduceByOne'
+Route::post('/checkout', [
+    'uses' => 'ProductosController@postCheckout',
+    'as' => 'checkout',
+    'middleware' => 'auth'
 ]);
+

@@ -13,6 +13,7 @@ class productos extends Model
      * @var array
      */
     protected $fillable = [
+        'id',
         'clave',
         'codigo_fabricante'	,
         'descripcion',
@@ -21,7 +22,8 @@ class productos extends Model
         'garantia'	,
         'clase'	,
         'disponible',	
-        'precio	moneda'	,
+        'precio',
+        'moneda'	,
         'ficha_tecnica'	,
         'ficha_comercial'	,
         'imagen',

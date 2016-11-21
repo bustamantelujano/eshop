@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Session;
 use App\Http\Requests;
-
+use Auth;
 use App\Carrito;
 use App\Productos;
 
@@ -21,16 +21,23 @@ class ProductosController extends Controller
 	}*/
 
 
-    public function getAgregaCarrito(Request $request, $id){
-    	$producto = Productos::find($id);
-    	$carritoViejo = Session::has('Carrito') ? Session::get('Carrito') : null;
-    	$Carrito = new Carrito($carritoViejo);
-    	$Carrito->add($producto,$producto->id);
+    public function detalleProducto(Request $request, $clave){
 
-    	$request->session()->put('Carrito',$Carrito);
-    	//dd($request->session()->get('Carrito'));
-    	return redirect()->route('producto.agregaCarrito');
+        $producto = \DB::table('productos')->where('clave', $clave )->first();
+
+        return view('productDetail', compact('producto') );
+
     }
+
+    public function eliminar($id){
+        proyectos::find($id)->delete();
+        return Redirect('/consultarProyectos');
+    }
+    public function addToCart($clave){ 
+        $producto = \DB::table('productos')->where('clave', $clave )->first();
+        return view('productDetail', compact('producto') );
+    }
+    
 
     public function getCarrito(){
     	if (!Session::has('Carrito')){
@@ -41,6 +48,7 @@ class ProductosController extends Controller
     	return view ('compra-carrito', ['productos' => $Carrito->articulos, 'totalPrecio' => $Carrito->totalPrecio]);
     }
 
+
      public function getReduceByOne($id) {
         $carritoViejo = Session::has('Carrito') ? Session::get('Carrito') : null;
         $Carrito = new Carrito($carritoViejo);
@@ -50,7 +58,7 @@ class ProductosController extends Controller
         } else {
             Session::forget('Carrito');
         }
-        return redirect()->route('producto.compraCarrito');
+        return  view ('compra-carrito');
     }
     public function getRemoveItem($id) {
         $carritoViejo = Session::has('Carrito') ? Session::get('Carrito') : null;
@@ -61,7 +69,7 @@ class ProductosController extends Controller
         } else {
             Session::forget('Carrito');
         }
-        return redirect()->route('producto.compraCarrito');
+        return view ('compra-carrito');
     }
 
 }

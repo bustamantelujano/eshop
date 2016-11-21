@@ -67,8 +67,9 @@
 
                     <ul class="nav navbar-nav navbar-right">
                     <li>
-                    <a href="{{ route('producto.compraCarrito') }}">Compras <i class="glyphicon glyphicon-shopping-cart"></i>
-                    <span ckass ="badge">{{Session::has('Carrito') ? Session::get('Carrito')->totalCantidad : '' }}</span>
+                    <a href="{{ route('producto.compraCarrito') }}">Carrito <i class="glyphicon glyphicon-shopping-cart"></i>
+                    <span class ="badge">{{Session::has('Carrito') ? Session::get('Carrito')->totalCantidad : '' }}</span>
+                    
                      </a>   
                     </li>
 

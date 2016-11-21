@@ -66,7 +66,12 @@
                     <!-- Right Side Of Navbar -->
 
                     <ul class="nav navbar-nav navbar-right">
-                    <li><a href="<?php echo e(url('/carrito')); ?>">Compras <i class="glyphicon glyphicon-shopping-cart"></i></li></a>
+                    <li>
+                    <a href="<?php echo e(route('producto.compraCarrito')); ?>">Carrito <i class="glyphicon glyphicon-shopping-cart"></i>
+                    <span class ="badge"><?php echo e(Session::has('Carrito') ? Session::get('Carrito')->totalCantidad : ''); ?></span>
+                    
+                     </a>   
+                    </li>
 
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
