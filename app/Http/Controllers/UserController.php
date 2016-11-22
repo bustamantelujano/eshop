@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Auth;
 use Image;
-
+use App\Carrito;
+use DB;
 class UserController extends Controller
 {
     
@@ -46,18 +47,38 @@ class UserController extends Controller
         
         return view('profile', array('user' => Auth::user()) );
     }
+    public function addToCart($clave){ 
+        $user = Auth::user();
+        $nuevo = new Carrito;
+        $nuevo->codigoitem = $clave;
+        $nuevo->idcliente = $user->id;
+        $nuevo -> save();
 
-    public function carrito()
-    {
-        return view ('/carrito', array('user' => Auth::user()));
+        return Redirect('/detalle/'.$clave);
     }
 
-    public function addCarrito(request $request){
-        $carrito = Auth::carrito();
-        $carrito->id = $request->input('id');
 
-        return view ('/carrito', array('user' => Auth::user()));
+    public function getCarrito(){ 
+
+        $user = Auth::user();
+
+        $total = DB::table('carritos AS c')
+            ->join('productos AS p', 'p.clave', '=', 'c.codigoitem')
+            ->where('c.idcliente', '=',  $user->id )
+            ->select('p.clave', 'c.idcliente','p.descripcion', 'p.precio')
+            ->sum('p.precio');
+
+        $carritos = DB::table('carritos AS c')
+            ->join('productos AS p', 'p.clave', '=', 'c.codigoitem')
+            ->where('c.idcliente', '=',  $user->id )
+            ->select('p.clave', 'c.idcliente','p.descripcion', 'p.precio', 'p.imagen', 'p.ficha_comercial')
+            ->get();
+
+        return view('compra-carrito', compact('carritos', 'total'));
     }
+
+
+    
 
 
 }

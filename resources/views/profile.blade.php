@@ -5,7 +5,8 @@
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
             <img src="/uploads/avatars/{{ $user->avatar }}" style="width:150px; height:150px; float:left; border-radius:50%; margin-right:25px;">
-            <h2>{{ $user->name }}</h2>
+            <h1>{{ $user->name }}</h1>
+
             <form enctype="multipart/form-data" action="/profile" method="POST">
                 <fieldset>
                     <div>

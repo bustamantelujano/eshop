@@ -2,32 +2,50 @@
 @section('content')
 
 
-@if(session::has('Carrito'))
+@if( $carritos != null )
+
+
+    <form>
+    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+    </form>
 	<div class="row">
-		<div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3" style="margin: 20px">
+		<div class="col-sm-10 col-md-10 col-md-offset-10 col-sm-offset-10" style="margin: 20px">
 			<ul class="list-group">
-				@foreach($productos as $p)
+				@foreach($carritos as $c)
 				<li class="list-group-item">
-                                <span class="badge">{{ $p['cantidad'] }}</span>
-                                <strong>{{ $p['articulo']['clave'] }}</strong>
-                                <span class="label label-success">{{ $p['precio'] }}</span>
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-primary btn-xs dropdown-toogle" data-toggle="dropdown">Action 
-                                    <span class="caret"></span></button>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="{{ route('producto.reduceByOne', ['id' => $p['articulo']['id']]) }}">Quitar uno</a></li>
-                                        <li><a href="{{ route('producto.remove', ['id' => $p['articulo']['id']]) }}">Quitar todos</a></li>
-                                    </ul>
+                                <a href="/detalle/{{$c->clave}}" class="text-left col-md-2" >
+                                    <img src="{{$c->imagen}}" style="width:100px; height:100px;  border-radius:5%; margin:5px; ">
+                                </a>               
+
+                                <span class="badge">{{ $c -> clave}}</span>
+                                <div class=" col-md-10"> 
+                                   <div>                
+                                        <strong>
+                                            <a  href="/detalle/{{$c->clave}}">{{ $c->descripcion }}</a>
+                                        </strong>
+                                        
+                                        <div class="text-right" >
+                                            <span class="text-right" style=" font-size: 20px; margin-bottom: 20px"><strong>${{ $c-> precio }}</strong></span>
+                                        </div>  
+                                    </div>  
+                                    <br>
+                                    <p>{{ $c -> ficha_comercial}}</p>
                                 </div>
-                            </li>
+
+
+                                <div class="text-right">
+                                    <a href="" class="btn btn-danger">Quitar</a>
+                                </div>
+
+                </li>
              @endforeach
 			</ul>
 		</div>
 	</div>
 
 	 <div class="row" style="margin: 20px">
-            <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3" style="font-size: 40px; margin: 40px">
-                <strong>Total: {{ $totalPrecio }}</strong>
+            <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3" style="font-size: 35px; margin: 40px">
+                <strong>Total: {{$total}} Pesos</strong>
             </div>
         </div>
  <hr>

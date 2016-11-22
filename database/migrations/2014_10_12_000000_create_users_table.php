@@ -33,7 +33,6 @@ class CreateUsersTable extends Migration
         Schema::create('carrito', function (Blueprint $table) {
             $table->increments('idcliente');
             $table->string('codigoitem');
-            $table->string('precioitem');
           
         });
         Schema::create('productos', function (Blueprint $table) {

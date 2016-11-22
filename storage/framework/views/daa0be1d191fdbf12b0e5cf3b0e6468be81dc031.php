@@ -11,6 +11,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
 
+
     <title><?php echo e(config('app.name', 'CompraEnCVA')); ?></title>
 
     <!-- Styles -->
@@ -36,8 +37,7 @@
 <script src="js/bootstrap.js"></script>
 </head>
 <body>
-    <div id="app">
-
+cart
     
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
@@ -67,10 +67,12 @@
 
                     <ul class="nav navbar-nav navbar-right">
                     <li>
-                    <a href="<?php echo e(route('producto.compraCarrito')); ?>">Carrito <i class="glyphicon glyphicon-shopping-cart"></i>
-                    <span class ="badge"><?php echo e(Session::has('Carrito') ? Session::get('Carrito')->totalCantidad : ''); ?></span>
-                    
-                     </a>   
+                    <?php if(!Auth::guest()): ?>
+                        <a href="/carrito">Carrito <i class="glyphicon glyphicon-shopping-cart"></i>
+                       <!-- <span class ="badge"></span> -->
+                        
+                         </a>   
+                    <?php endif; ?>
                     </li>
 
                     <ul class="nav navbar-nav navbar-right">

@@ -53,7 +53,7 @@
 
                             <h4></h4>
 
-                            <span style="font-size: 20px; margin: 10px"><strong>$<?php echo e($p->precio); ?> <?php echo e($p->moneda); ?>  </strong>  </span>
+                            <span style="font-size: 20px; margin: 10px"><strong>$<?php echo e($p->precio); ?> Pesos </strong>  </span>
                            <!--
                             <a href="<?php echo e(route('producto.agregaCarrito', ['id' => $p->id])); ?>" class="btn btn-success "  style="margin-right:10px ; margin-bottom: 10px;"> 
                             Agregar

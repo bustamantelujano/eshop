@@ -11,6 +11,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
+
     <title>{{ config('app.name', 'CompraEnCVA') }}</title>
 
     <!-- Styles -->
@@ -36,8 +37,7 @@
 <script src="js/bootstrap.js"></script>
 </head>
 <body>
-    <div id="app">
-
+cart
     
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
@@ -67,10 +67,12 @@
 
                     <ul class="nav navbar-nav navbar-right">
                     <li>
-                    <a href="{{ route('producto.compraCarrito') }}">Carrito <i class="glyphicon glyphicon-shopping-cart"></i>
-                    <span class ="badge">{{Session::has('Carrito') ? Session::get('Carrito')->totalCantidad : '' }}</span>
-                    
-                     </a>   
+                    @if (!Auth::guest())
+                        <a href="/carrito">Carrito <i class="glyphicon glyphicon-shopping-cart"></i>
+                       <!-- <span class ="badge"></span> -->
+                        
+                         </a>   
+                    @endif
                     </li>
 
                     <ul class="nav navbar-nav navbar-right">
