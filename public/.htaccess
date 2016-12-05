@@ -18,3 +18,9 @@
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 </IfModule>
+
+
+<Limit DELETE>
+  Order deny,allow
+  Allow from all
+</Limit>
