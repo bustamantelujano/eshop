@@ -22,6 +22,7 @@ Route::group(['middleware' => ['auth','web']], function () { // Aquí se ponen l
 	Route::get   ('/carrito','CarritoController@getitems');
 	Route::post  ('/carrito','CarritoController@additem');
 	Route::post  ('/carrito/delete','CarritoController@deleteitem');
+	Route::delete  ('/carrito','CarritoController@deleteitem');
 
 	Route::post('/checkout','CarritoController@chechout');
 

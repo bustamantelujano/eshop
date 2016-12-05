@@ -77,8 +77,12 @@ class CarritoController extends Controller
                     ->where([['idcliente', $user->id],['codigoitem',$clave]])
                     ->increment('cantidad' , 1);
             }
+            $arreglo = array();
+            $arreglo["validado"] = true;
+            $agregado = true;
+            $producto = DB::table('productos')->where('clave', $clave )->first();
 
-        return Redirect('/producto/'.$clave);
+        return view('productDetail', compact('producto','agregado'));
     }
 
 

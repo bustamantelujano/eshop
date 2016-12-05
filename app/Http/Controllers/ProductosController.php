@@ -23,8 +23,8 @@ class ProductosController extends Controller
     public function detalleProducto($clave){
 
         $producto = \DB::table('productos')->where('clave', $clave )->first();
-
-        return view('productDetail', compact('producto') );
+        $agregado = false;
+        return view('productDetail', compact('producto', 'agregado') );
 
     }
 

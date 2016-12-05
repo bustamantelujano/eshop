@@ -53,9 +53,13 @@
                     <br />
 
                     <br>
-                    <form action="/user" method="delete">
-                        <a href="/user/editar" class="btn btn-primary">Editar mis datos</a> 
+                    
+                     <form action="/user/delete" method="POST">
+                                             <a href="/user/editar" class="btn btn-primary">Editar mis datos</a> 
+
                         <input type="submit" class="btn btn-danger" value="Eliminar mi cuenta">
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+
                      </form> 
                 </fieldset>
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">

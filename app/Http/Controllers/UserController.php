@@ -18,8 +18,7 @@ class UserController extends Controller{
     public function destroy(){
         $user = Auth::user();
         $user->delete();
-
-        return Redirect::route('/logout');
+        return Redirect::route('/home');
     }
 
 

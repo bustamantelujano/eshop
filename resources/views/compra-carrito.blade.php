@@ -44,6 +44,7 @@
                                    
 
                                 <div class="text-right">
+                                
                                     <form action="/carrito/delete" method="POST">
                                         <input type="submit" class="btn btn-danger" value="Quitar">
                                         <input type="hidden" name="clave" value="{{$c->codigoitem}}">
