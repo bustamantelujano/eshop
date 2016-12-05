@@ -43,10 +43,11 @@
 
 
                                 <div class="text-right">
-                                    <form action="/carrito" method="delete">
+                                    <form action="/carrito" method="DELETE">
                                         <input type="submit" class="btn btn-danger" value="Quitar">
                                         <input type="hidden" name="clave" value="{{$c->codigoitem}}">
-                                       
+                                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+
                                      </form> 
                                 </div>
 

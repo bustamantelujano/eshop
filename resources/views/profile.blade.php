@@ -51,7 +51,7 @@
                     <br />
 
                     <br>
-                    <form action="/user" method="DELETE">
+                    <form action="/user" method="delete">
                         <a href="/user/editar" class="btn btn-primary">Editar mis datos</a> 
                         <input type="submit" class="btn btn-danger" value="Eliminar mi cuenta">
                      </form> 

@@ -41,7 +41,7 @@
                     </div>
                     <div class="form-group">
                         <label for="">Número interior (no obligatorio)</label>
-                        <input type="text" class="form-control" name="numintdireccion"  value="{{$user->numintdireccion}}">
+                        <input type="text" class="form-control" name="numintdireccion"  value="{{$user->numdireccionint}}">
                     </div>
                     <div class="form-group">
                         <label for="ciudad">Ciudad</label>
