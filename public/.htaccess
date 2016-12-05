@@ -20,7 +20,6 @@
 </IfModule>
 
 
-<Limit DELETE>
-  Order deny,allow
+<Limit GET POST PUT DELETE>
   Allow from all
 </Limit>

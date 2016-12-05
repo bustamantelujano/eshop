@@ -41,7 +41,6 @@ class CarritoController extends Controller
 
         public function deleteitem(Request $request){
         $user = Auth::user();
-
         $clave = $request->input('clave');
         DB::table('carritos')
             ->where([

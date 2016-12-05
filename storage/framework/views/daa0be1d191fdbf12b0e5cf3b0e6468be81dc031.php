@@ -116,9 +116,10 @@ cart
                 </div>
             </div>
         </nav>
-<br><br><br>
-<br><br><br>
+
+        <br><br><br><br>
         <?php echo $__env->yieldContent('content'); ?>
+        <br>
     </div>
 
     <!-- Scripts -->

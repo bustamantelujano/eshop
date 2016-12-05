@@ -7,23 +7,25 @@ Route::get('/home', 'HomeController@index');
 Route::get('/', 'HomeController@index');
 Route::get('producto/{clave}', 'ProductosController@detalleProducto');
 
-Route::group(['middleware' => 'auth'], function () { // Aquí se ponen las rutas que solo pueden ser accesadas por usuarios registrados
+Route::group(['middleware' => ['auth','web']], function () { // Aquí se ponen las rutas que solo pueden ser accesadas por usuarios registrados
   
 	// Rutas de usuario REGISTRADO
 	Route::get   ('/user', 'UserController@getperfilusuario');
-	Route::post   ('/user', 'UserController@update_datos');
-	Route::delete ('/user', 'UserController@destroy');
+	Route::post  ('/user', 'UserController@update_datos');
+	Route::post('/user/delete', 'UserController@destroy');
 
 	Route::get   ('/user/editar', 'UserController@editprofile');
 	Route::post  ('/user/image','UserController@update_avatar');
 
 	//Route::post('/editprofile','UserController@update_datos');
 
-	Route::get   ('/carrito', 'CarritoController@getitems');
+	Route::get   ('/carrito','CarritoController@getitems');
 	Route::post  ('/carrito','CarritoController@additem');
-	Route::delete('/carrito','CarritoController@deleteitem');
+	Route::post  ('/carrito/delete','CarritoController@deleteitem');
 
 	Route::post('/checkout','CarritoController@chechout');
+
+
 });
 	Route::get('/401','UserController@error401');
 
@@ -33,6 +35,8 @@ Route::group(['middleware' => 'auth'], function () { // Aquí se ponen las rutas
 
 
 //RUTAS DE ADMINISTRADOR
+
+
 Route::group(['middleware' => ['auth','admin']], function () { // Aquí se ponen las rutas que solo pueden ser accesadas por usuarios registrados
 	Route::get ('/admin/dashboard', 'UserController@getAdminDashboard');
 

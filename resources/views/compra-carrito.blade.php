@@ -44,20 +44,13 @@
                                    
 
                                 <div class="text-right">
-                                    <form action="/carrito" method="delete">
+                                    <form action="/carrito/delete" method="POST">
                                         <input type="submit" class="btn btn-danger" value="Quitar">
-                                        <input type="hidden" name="clave" value="{{$c->codigoitem}}">
-                                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
-
-                                    </form> 
-                                    <form action="/carrito" method="delete">
-                                        <button class="btn btn-success" type="submit">
-                                           Agregar a Carrito <span class= "glyphicon glyphicon-shopping-cart"></span> 
-                                        </button>
                                         <input type="hidden" name="clave" value="{{$c->codigoitem}}">
                                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
-                                    </form>
+                                    </form> 
+
                                 </div>
 
                 </li>
@@ -73,9 +66,10 @@
                     No hay artículos en el carrito
                     @else
                     <strong>Total: ${{$total}} Pesos</strong>
+                    <a href="" type="button" style="font-size: 26px" class="btn btn-success">Pasar a pagar</a>
+
                     @endif
                     </div>
-                <a href="" type="button" style="font-size: 26px" class="btn btn-success">Pasar a pagar</a>
             </div>
         </div>
  <hr>

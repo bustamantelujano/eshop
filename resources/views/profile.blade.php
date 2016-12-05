@@ -1,5 +1,7 @@
 @extends('layouts.app')
 @section('content')
+
+
 <table class="pg-empty-placeholder"></table>
 <div class="container">
     <div class="row">

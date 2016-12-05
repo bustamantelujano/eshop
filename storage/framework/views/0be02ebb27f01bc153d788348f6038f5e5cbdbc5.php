@@ -7,7 +7,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>CompraEnCVA</title>
-
         <!-- Fonts -->
          <div class="container"> 
             <div class="row" >
