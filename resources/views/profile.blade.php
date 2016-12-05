@@ -7,7 +7,6 @@
             <img src="/uploads/avatars/{{ $user->avatar }}" style="width:150px; height:150px; float:left; border-radius:50%; margin-right:25px;">
             <h1>{{ $user->name }}</h1>
 
-            <form enctype="multipart/form-data" action="/profile" method="POST">
                 <fieldset>
                     <div>
                         <h3 class="title">Datos personales</h3>
@@ -50,10 +49,14 @@
                         </div>
                     </fieldset>
                     <br />
-                    <a href="/editprofile" class="btn btn-primary">Editar mis datos</a>
+
+                    <br>
+                    <form action="/user" method="DELETE">
+                        <a href="/user/editar" class="btn btn-primary">Editar mis datos</a> 
+                        <input type="submit" class="btn btn-danger" value="Eliminar mi cuenta">
+                     </form> 
                 </fieldset>
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
-            </form>
         </div>
         <form name="dataForm" id="dataForm" method="post" action="myData/validateData" class="ch-form myForm" novalidate="novalidate">
             <input type="hidden" name="updateOrigin" id="updateOrigin" value="">

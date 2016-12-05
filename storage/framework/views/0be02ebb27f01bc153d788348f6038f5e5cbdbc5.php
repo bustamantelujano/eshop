@@ -34,7 +34,7 @@
                                 <?php if(strlen("<?php echo e($p->imagen); ?>") < 20 ): ?>
                             <img href="/<?php echo e($p->clave); ?>" src="http://www.adwore.com/images/propiedad/sinimagendisp.png" style="width:180px; height:180px; float:left; border-radius:5%; margin-right:25px;">
                                 <?php else: ?>
-                            <a href="detalle/<?php echo e($p->clave); ?>">
+                            <a href="producto/<?php echo e($p->clave); ?>">
                             <img href="" src="<?php echo e($p->imagen); ?>" style="width:150px; height:150px; float:left; border-radius:5%; margin-right:25px;">
                             </a>
                             <?php endif; ?>
@@ -55,10 +55,7 @@
 
                             <span style="font-size: 20px; margin: 10px"><strong>$<?php echo e($p->precio); ?> Pesos </strong>  </span>
                            <!--
-                            <a href="<?php echo e(route('producto.agregaCarrito', ['id' => $p->id])); ?>" class="btn btn-success "  style="margin-right:10px ; margin-bottom: 10px;"> 
-                            Agregar
-                             <span class= "glyphicon glyphicon-shopping-cart"></span> 
-                            </a>
+                            
                             -->
                         </div>
                     </div>  

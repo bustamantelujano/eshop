@@ -2,59 +2,44 @@
 
 
 Auth::routes();
-
+//RUTAS PUBLICAS
 Route::get('/home', 'HomeController@index');
 Route::get('/', 'HomeController@index');
+Route::get('producto/{clave}', 'ProductosController@detalleProducto');
 
-
-
-Route::group(['middleware' => 'auth'], function () {
+Route::group(['middleware' => 'auth'], function () { // Aquí se ponen las rutas que solo pueden ser accesadas por usuarios registrados
   
-	// Aquí se ponen las rutas que solo pueden ser accesadas por usuarios registrados
-	
-	Route::get('/profile', 'UserController@profile');
+	// Rutas de usuario REGISTRADO
+	Route::get   ('/user', 'UserController@getperfilusuario');
+	Route::post   ('/user', 'UserController@update_datos');
+	Route::delete ('/user', 'UserController@destroy');
 
-	Route::post('/profile','UserController@update_avatar');
+	Route::get   ('/user/editar', 'UserController@editprofile');
+	Route::post  ('/user/image','UserController@update_avatar');
 
-	Route::get('/editprofile', 'UserController@editprofile');
+	//Route::post('/editprofile','UserController@update_datos');
 
-	Route::post('/editprofile','UserController@update_datos');
+	Route::get   ('/carrito', 'CarritoController@getitems');
+	Route::post  ('/carrito','CarritoController@additem');
+	Route::delete('/carrito','CarritoController@deleteitem');
 
-	Route::get('/carrito', 'UserController@getCarrito');
+	Route::post('/checkout','CarritoController@chechout');
+});
+	Route::get('/401','UserController@error401');
 
-	Route::post('/carrito', 'UserController@addCarrito');
+//	Route::get('/agregarCarrito/{id}',['uses' => 'ProductosController@getAgregaCarrito','as' => 'producto.agregaCarrito']);
+//	Route::post('/deleteItem','UserController@deleteItemFromCarrito');
 
-	Route::get('/detalle/{clave}','ProductosController@detalleProducto');
 
-	Route::get('addToCart/{id}','UserController@addToCart');
 
-Route::get('/agregarCarrito/{id}',['uses' => 'ProductosController@getAgregaCarrito','as' => 'producto.agregaCarrito']);
+//RUTAS DE ADMINISTRADOR
+Route::group(['middleware' => ['auth','admin']], function () { // Aquí se ponen las rutas que solo pueden ser accesadas por usuarios registrados
+	Route::get ('/admin/dashboard', 'UserController@getAdminDashboard');
 
-Route::get('/compra-carrito',['uses' => 'ProductosController@getCarrito','as' => 'producto.compraCarrito']);
-
-Route::get('/remove/{id}', ['uses' => 'ProductosController@getRemoveItem','as' => 'producto.remove']);
-
-Route::get('/reduce/{id}', ['uses' => 'ProductosController@getReduceByOne','as' => 'producto.reduceByOne']);
-
+	return "this page requires that you be logged in and an Admin"; 
 });
 
 
-Route::get('/',[
-	'uses' => 'HomeController@index',
-	'as' => 'producto.index'
-	]);
 
 
-
-Route::get('/checkout', [
-    'uses' => 'ProductosController@getCheckout',
-    'as' => 'checkout',
-    'middleware' => 'auth'
-]);
-
-Route::post('/checkout', [
-    'uses' => 'ProductosController@postCheckout',
-    'as' => 'checkout',
-    'middleware' => 'auth'
-]);
 

@@ -67,12 +67,19 @@ cart
 
                     <ul class="nav navbar-nav navbar-right">
                     <li>
-                    @if (!Auth::guest())
-                        <a href="/carrito">Carrito <i class="glyphicon glyphicon-shopping-cart"></i>
-                       <!-- <span class ="badge"></span> -->
                         
-                         </a>   
-                    @endif
+                        @if (!Auth::guest() && Auth::user()->isAdmin() )
+                        <a href="{{ url('/admin/dashboard') }}">Dashboard</a>
+                        @endif
+                    </li>
+                    <li>
+
+
+                        @if (!Auth::guest())
+                            <a href="/carrito">Carrito  <i class="glyphicon glyphicon-shopping-cart"></i>
+                    
+                             </a>   
+                        @endif
                     </li>
 
                     <ul class="nav navbar-nav navbar-right">
@@ -90,7 +97,7 @@ cart
                                 <ul class="dropdown-menu" role="menu">
                             
                                     <li>
-                                     <a href="{{ url('/profile') }}"><i class="glyphicon glyphicon-user"></i> Mi Perfil</a>
+                                     <a href="{{ url('/user') }}"><i class="glyphicon glyphicon-user"></i> Mi perfil</a>
                                         <a href="{{ url('/logout') }}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

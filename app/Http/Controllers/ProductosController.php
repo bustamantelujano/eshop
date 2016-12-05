@@ -20,7 +20,7 @@ class ProductosController extends Controller
 	}*/
 
 
-    public function detalleProducto(Request $request, $clave){
+    public function detalleProducto($clave){
 
         $producto = \DB::table('productos')->where('clave', $clave )->first();
 

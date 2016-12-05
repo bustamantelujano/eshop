@@ -35,7 +35,7 @@
                                 @if (strlen("{{$p->imagen}}") < 20 )
                             <img href="/{{$p->clave}}" src="http://www.adwore.com/images/propiedad/sinimagendisp.png" style="width:180px; height:180px; float:left; border-radius:5%; margin-right:25px;">
                                 @else
-                            <a href="detalle/{{$p->clave}}">
+                            <a href="producto/{{$p->clave}}">
                             <img href="" src="{{$p->imagen}}" style="width:150px; height:150px; float:left; border-radius:5%; margin-right:25px;">
                             </a>
                             @endif
@@ -55,10 +55,7 @@
 
                             <span style="font-size: 20px; margin: 10px"><strong>${{$p->precio}} Pesos </strong>  </span>
                            <!--
-                            <a href="{{ route('producto.agregaCarrito', ['id' => $p->id]) }}" class="btn btn-success "  style="margin-right:10px ; margin-bottom: 10px;"> 
-                            Agregar
-                             <span class= "glyphicon glyphicon-shopping-cart"></span> 
-                            </a>
+                            
                             -->
                         </div>
                     </div>  
