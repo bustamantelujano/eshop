@@ -2,7 +2,7 @@
 @section('content')
 
 
-@if( $carritos != null )
+@if( $itemscarrito != null )
 
 
     <form>
@@ -11,7 +11,7 @@
     <div class="row">
         <div class="col-sm-10 col-md-10 col-md-offset-10 col-sm-offset-10" style="margin: 20px">
             <ul class="list-group">
-                @foreach($carritos as $c)
+                @foreach($itemscarrito as $c)
                 <li class="list-group-item">
                                 <a href="/producto/{{$c->clave}}" class="text-left col-md-2" >
                                     <img src="{{$c->imagen}}" style="width:100px; height:100px;  border-radius:5%; margin:5px; ">
@@ -44,7 +44,7 @@
                                    
 
                                 <div class="text-right">
-                                
+
                                     <form action="/carrito/delete" method="POST">
                                         <input type="submit" class="btn btn-danger" value="Quitar">
                                         <input type="hidden" name="clave" value="{{$c->codigoitem}}">
@@ -67,7 +67,7 @@
                     No hay artículos en el carrito
                     @else
                     <strong>Total: ${{$total}} Pesos</strong>
-                    <a href="" type="button" style="font-size: 26px" class="btn btn-success">Pasar a pagar</a>
+                    <a href="/checkout" type="button" style="font-size: 26px" class="btn btn-success">Pasar a pagar 💵</a>
 
                     @endif
                     </div>

@@ -124,6 +124,8 @@ cart
 
     <!-- Scripts -->
     <script src="/js/app.js"></script>
+    <?php echo $__env->yieldContent('scripts'); ?>
+
 </body>
 <footer>
         <hr>

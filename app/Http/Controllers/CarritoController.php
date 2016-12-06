@@ -6,37 +6,17 @@ use Illuminate\Http\Request;
 use Auth;
 use DB;
 use App\Carrito;
+use Stripe\Charge;
+use Stripe\Stripe;
 
 class CarritoController extends Controller
 {
 
 	   public function getitems(){ 
 	   	$user = Auth::user();
-
-	   	$items = DB::table('carritos')
-            ->where('idcliente', '=',  $user->id )
-            ->select(DB::raw(' Sum(cantidad) as totalitems'))
-            ->first();
-       // dd($user);
-        // select Sum(cantidad*precio) as Result from 
-        // carritos as c join productos as p on c.codigoitem = p.clave
-        // where c.idcliente = '1'
-        $preciomultiple = DB::table('carritos as c')
-            ->join('productos as p', 'p.clave', '=', 'c.codigoitem')
-            ->where('c.idcliente', '=',  $user->id )
-            ->select(DB::raw(' Sum(cantidad*precio) as result'))
-            ->first();
-        $total = $preciomultiple->result;
-       // $total = 1;
-      // $total = $total->total;
-       //dd($total);
-        $carritos = DB::table('carritos AS c')
-            ->join('productos AS p', 'p.clave', '=', 'c.codigoitem')
-            ->where('c.idcliente', '=',  $user->id )
-            ->select('p.clave', 'c.idcliente','p.descripcion', 'p.precio', 'p.imagen', 'p.ficha_comercial', 'c.cantidad','c.codigoitem')
-            ->get();
-
-        return view('compra-carrito', compact('carritos', 'total', 'items'));
+        $total = $user->total();
+        $itemscarrito = $user->itemsCarrito();
+        return view('compra-carrito', compact('itemscarrito', 'total', 'items'));
     }
 
         public function deleteitem(Request $request){
@@ -85,5 +65,37 @@ class CarritoController extends Controller
         return view('productDetail', compact('producto','agregado'));
     }
 
+     public function getCheckout() {
+     	$user = Auth::user();
+     	$total = $user->total();
+     	return view('checkout', compact('total'));
+    }
 
+    public function postCheckout(Request $request)  {
+    	$user = Auth::user();
+
+        Stripe::setApiKey('sk_test_pUcnpeWTGArzktGqFTe8SoTE');
+
+        try {
+		    
+			Stripe::setApiKey('sk_test_pUcnpeWTGArzktGqFTe8SoTE');
+
+			$customer =  \Stripe\Customer::retrieve("cus_9h1dPct5LzNH3a");
+			$total = $user->total() * 100;
+			\Stripe\Charge::create(array(
+				"customer"=> $customer,
+			  "amount" => ceil($total),
+			  "currency" => "mxn",
+			  "source" => $request->input('stripeToken'), // obtained with Stripe.js
+			  "description" => "Cargo de CVAshop"
+			));
+
+
+        } catch (\Exception $e) {
+            return redirect('/401');
+        }
+
+        // Session::forget('cart');
+        return redirect('/user');
+    }
 }

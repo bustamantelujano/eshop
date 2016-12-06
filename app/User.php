@@ -31,7 +31,25 @@ class User extends Authenticatable
             return $items ;
 
     }
+    public function total(){
 
+        $preciomultiple = DB::table('carritos as c')
+            ->join('productos as p', 'p.clave', '=', 'c.codigoitem')
+            ->where('c.idcliente', '=',  $this->id )
+            ->select(DB::raw(' Sum(cantidad*precio) as result'))
+            ->first();
+        $total = $preciomultiple->result;
+        return $total;
+    }
+    public function itemsCarrito(){
+        $itemscarrito = DB::table('carritos AS c')
+            ->join('productos AS p', 'p.clave', '=', 'c.codigoitem')
+            ->where('c.idcliente', '=',  $this->id )
+            ->select('p.clave', 'c.idcliente','p.descripcion', 'p.precio', 'p.imagen', 'p.ficha_comercial', 'c.cantidad','c.codigoitem')
+            ->get();
+
+        return $itemscarrito;
+    }
     public function isAdmin(){
         if ($this->is_admin == 1 ){
             return true;
