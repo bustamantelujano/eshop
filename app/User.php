@@ -95,6 +95,13 @@ class User extends Authenticatable
         return $idrecibo;
     }
 
+
+    public function agregatelefono($numero){
+        $result =  DB::table('users')
+            ->where('id', '=',  $this->id )
+            ->update(['telefono' => $numero]);
+            return;
+    }
     public function categorias(){
         $categorias = DB::table('productos')
             ->select('grupo')

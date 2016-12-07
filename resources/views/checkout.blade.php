@@ -14,22 +14,23 @@
                     <div class="col-xs-12">
                         <div class="form-group">
                             <label for="name">Nombre</label>
-                            <input type="text" id="name" class="form-control" required name="name">
+                            <input type="text" id="name" class="form-control" required name="name" value="{{Auth::user()->name}}">
                         </div>
                     </div>
                     <div class="col-xs-12">
                         <div class="form-group">
                             <label for="address">Dirección</label>
-                            <input type="text" id="address" class="form-control" required name="address">
+                            <input type="text" id="address" class="form-control" required name="address" value="{{Auth::user()->direccion}}">
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="form-group">
+                            <label for="tel">Telefono</label>
+                            <input type="text" id="tel" class="form-control" required name="tel" value="{{Auth::user()->telefono}}">
                         </div>
                     </div>
                     <hr>
-                    <div class="col-xs-12">
-                        <div class="form-group">
-                            <label for="card-name">Nombre del tarjetahabiente</label>
-                            <input type="text" id="card-name" class="form-control" required>
-                        </div>
-                    </div>
+                    
                     <div class="col-xs-12">
                         <div class="form-group">
                             <label for="card-number">Número de tarjeta</label>

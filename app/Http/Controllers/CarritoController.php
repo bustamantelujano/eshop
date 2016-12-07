@@ -74,6 +74,10 @@ class CarritoController extends Controller
     public function postCheckout(Request $request)  {
     	$user = Auth::user();
 
+    	//dd($request);
+    	if(strlen($user->telefono) < 10){
+    		$user->agregatelefono($request->input('tel'));
+    	}
         Stripe::setApiKey('sk_test_pUcnpeWTGArzktGqFTe8SoTE');
 
         try {
