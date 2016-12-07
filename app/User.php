@@ -83,7 +83,7 @@ class User extends Authenticatable
 
         $client = new Client();
 
-        $client->request('GET', 'https://smsgateway.me/api/v3/messages/send?email=bustamantelujano@gmail.com&password=1234554321&device=33055&number='.$this->telefono.'&message='.$this->name.', muchas gracias por tu compra, puede ver su recibo en https://cvashop.herokuapp.com/compra/'.$idrecibo);
+        $client->request('GET', 'https://smsgateway.me/api/v3/messages/send?email=bustamantelujano@gmail.com&password=1234554321&device=33055&number='.$this->telefono.'&message='.$this->name.', muchas gracias por tu compra, puede ver su recibo en cvashop.herokuapp.com/compra/'.$idrecibo);
 
    // dd($result);
 

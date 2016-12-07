@@ -89,6 +89,7 @@
             </tr>
           </thead>
           <tbody>
+          @if($venta != null)
             @foreach($venta as $v)
             <tr>
                 <td>{{$v->idrecibo}}</td>
@@ -104,7 +105,7 @@
               
             </tr>
             @endforeach
-
+            @endif
 
           </tbody>
         </table> 

@@ -54,7 +54,7 @@ class UserController extends Controller{
      //   dd($user);
         $user->save();
         
-        return view('profile', array('user' => Auth::user()) );
+        return view('profile' );
     }
 
     public function getAdminDashboard(){
