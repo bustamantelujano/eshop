@@ -16,12 +16,21 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
+    public function index() {
         $productos=DB::table('productos')->paginate(12);
         return view('welcome', compact('productos'));
     }
     
+    public function getCompra($idcompra){
+        
+        $Compra = DB::select('select descripcion, marca, precio, cantidad, fecha, codigoitem from venta as v 
+                     join carritos as c on c.idcompra = v.id
+                     inner join productos as p on p.clave = c.codigoitem 
+                     where v.idrecibo = ?'
+                     ,[$idcompra]
+                     );
+        return view('detallecompra', compact('Compra', 'idcompra'));
+    }
     
     public function perfils()
     {

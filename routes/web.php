@@ -31,6 +31,9 @@ Route::group(['middleware' => ['auth','web']], function () { // Aquí se ponen l
 });
 	Route::get('/401','UserController@error401');
 
+	Route::get('/compra/{idcompra}', 'HomeController@getCompra');
+
+
 //	Route::get('/agregarCarrito/{id}',['uses' => 'ProductosController@getAgregaCarrito','as' => 'producto.agregaCarrito']);
 //	Route::post('/deleteItem','UserController@deleteItemFromCarrito');
 

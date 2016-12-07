@@ -34,7 +34,7 @@ class CarritoController extends Controller
         $user = Auth::user();
         $clave =  $request->input('clave');
         $itemsconclave = DB::table('carritos')
-            ->where([['carritos.codigoitem', '=',  $clave ] ,['carritos.idcliente', '=', $user->id ]])
+            ->where([['carritos.codigoitem', '=',  $clave ] ,['carritos.idcliente', '=', $user->id ],['carritos.idcompra','=',null]])
             ->select('carritos.*')
             ->first();
         $precioitem = DB::table('productos')
@@ -54,7 +54,7 @@ class CarritoController extends Controller
             }
             else{ //El item sí está en el carrito, entonces solo se aumenta la cantidad
                 DB::table('carritos')
-                    ->where([['idcliente', $user->id],['codigoitem',$clave]])
+                    ->where([['idcliente', $user->id],['codigoitem',$clave],['carritos.idcompra','=',null]])
                     ->increment('cantidad' , 1);
             }
             $arreglo = array();
@@ -84,18 +84,27 @@ class CarritoController extends Controller
 			$total = $user->total() * 100;
 			\Stripe\Charge::create(array(
 				"customer"=> $customer,
-			  "amount" => ceil($total),
-			  "currency" => "mxn",
-			  "source" => $request->input('stripeToken'), // obtained with Stripe.js
-			  "description" => "Cargo de CVAshop"
+				"amount" => ceil($total),
+				"currency" => "mxn",
+				"source" => $request->input('stripeToken'), // obtained with Stripe.js
+				"description" => "Cargo de CVAshop"
 			));
 
 
+
+
+			//$compras
+
         } catch (\Exception $e) {
+        	//dd($e);
             return redirect('/401');
         }
 
+
+		$idcompra = $user->guardacompra();
+		//$compras = $user->compras();
+		$linkrecibo = '/compra/'.$idcompra; 
         // Session::forget('cart');
-        return redirect('/user');
+        return redirect($linkrecibo);
     }
 }

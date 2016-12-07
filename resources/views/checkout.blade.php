@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-sm-6 col-md-4 col-md-offset-4 col-sm-offset-3">
             <h1>Tu compra</h1>
-            <h3>Total: ${{ $total }}</h3>
+            <h3>Total: ${{ $total }} MXN</h3>
             <div id="charge-error" class="alert alert-danger {{ !Session::has('error') ? 'hidden' : ''  }}">
                 {{ Session::get('error') }}
             </div>

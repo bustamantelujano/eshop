@@ -37,7 +37,6 @@
 <script src="js/bootstrap.js"></script>
 </head>
 <body>
-cart
     
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
@@ -76,9 +75,11 @@ cart
 
 
                         @if (!Auth::guest())
-                            <a href="/carrito">Carrito  <i class="glyphicon glyphicon-shopping-cart"></i>
+
+                            <a href="/carrito">Carrito <i class="glyphicon glyphicon-shopping-cart"></i>
                     
                              </a>   
+                    
                         @endif
                     </li>
 

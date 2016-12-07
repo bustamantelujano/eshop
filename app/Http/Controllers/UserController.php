@@ -12,7 +12,10 @@ class UserController extends Controller{
 
     
     public function getperfilusuario(){
-    	return view ('profile', array('user' => Auth::user()));
+    	$user = Auth::user();
+        $venta = $user->compras();
+        return view ('profile',  array('user' => Auth::user()), compact('venta'));
+
     }
 
     public function destroy(){
@@ -20,7 +23,6 @@ class UserController extends Controller{
         $user->delete();
         return Redirect::route('/home');
     }
-
 
     public function update_avatar(Request $request){
     	// Handle the user upload of avatar
