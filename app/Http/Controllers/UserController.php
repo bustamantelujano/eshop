@@ -59,11 +59,101 @@ class UserController extends Controller{
         return view ('profile',  array('user' => Auth::user()), compact('venta'));
     }
 
-    public function getAdminDashboard(){
-        return view('home');
+    public function getArticulo($clave){
+
+    //Route::get ('/admin/dashboard', 'UserController@getAdminDashboard');
+
+        $a = \DB::table('productos')->where('clave', $clave )->first();
+
+        return view('editararticulo',compact('a'));
+
     }
+
+        public function actualizaArticulo(Request $request,$clave){
+
+            $codigo_fabricante = $request->input('codigo_fabricante');
+                     //   dd($codigo_fabricante);
+
+            $grupo = $request->input('grupo');
+            $marca = $request->input('marca');
+            $garantia = $request->input('garantia');
+            $clase = $request->input('clase');
+            $disponible = $request->input('disponible');
+            $precio = $request->input('precio');
+            $ficha_tecnica = $request->input('ficha_tecnica');
+            $ficha_comercial = $request->input('ficha_comercial');
+  
+            DB::table('productos')->where('clave', $clave )->update(['codigo_fabricante' => $codigo_fabricante]);
+            DB::table('productos')->where('clave', $clave )->update(['grupo' => $grupo ]);
+            DB::table('productos')->where('clave', $clave )->update(['marca' => $marca]);
+            DB::table('productos')->where('clave', $clave )->update(['garantia' => $garantia]);
+            DB::table('productos')->where('clave', $clave )->update(['clase' => $clase]);
+            DB::table('productos')->where('clave', $clave )->update(['disponible' => $disponible]);
+            DB::table('productos')->where('clave', $clave )->update(['precio' => $precio]);
+            DB::table('productos')->where('clave', $clave )->update(['ficha_tecnica' => $ficha_tecnica]);
+            DB::table('productos')->where('clave', $clave )->update(['ficha_comercial' => $ficha_comercial]);
+     
+
+          //  dd($clave);
+
+       // $a = \DB::table('productos')->where('clave', $clave )->first();
+
+        return redirect('/producto/'.$clave);
+
+    }
+    public function agregarArticulo(Request $request,$clave){
+
+            $codigo_fabricante = $request->input('codigo_fabricante');
+                     //   dd($codigo_fabricante);
+
+            $grupo = $request->input('grupo');
+            $marca = $request->input('marca');
+            $garantia = $request->input('garantia');
+            $clase = $request->input('clase');
+            $disponible = $request->input('disponible');
+            $precio = $request->input('precio');
+            $ficha_tecnica = $request->input('ficha_tecnica');
+            $ficha_comercial = $request->input('ficha_comercial');
+  
+            DB::table('productos')->where('clave', $clave )->update(['codigo_fabricante' => $codigo_fabricante]);
+            DB::table('productos')->where('clave', $clave )->update(['grupo' => $grupo ]);
+            DB::table('productos')->where('clave', $clave )->update(['marca' => $marca]);
+            DB::table('productos')->where('clave', $clave )->update(['garantia' => $garantia]);
+            DB::table('productos')->where('clave', $clave )->update(['clase' => $clase]);
+            DB::table('productos')->where('clave', $clave )->update(['disponible' => $disponible]);
+            DB::table('productos')->where('clave', $clave )->update(['precio' => $precio]);
+            DB::table('productos')->where('clave', $clave )->update(['ficha_tecnica' => $ficha_tecnica]);
+            DB::table('productos')->where('clave', $clave )->update(['ficha_comercial' => $ficha_comercial]);
+     
+
+          //  dd($clave);
+
+       // $a = \DB::table('productos')->where('clave', $clave )->first();
+
+        return redirect('/producto/'.$clave);
+
+    }
+
+
+
+
+
+    public function getAdminDashboard(){
+        $venta = DB::select('select v.*, email from venta as v
+                     join users as u on u.id = v.idcliente
+                     order by fecha desc'); 
+        $productos =  DB::select('select clave, descripcion, marca, grupo,precio,disponible from productos
+                    order by grupo'); 
+        return view('admin', compact('venta', 'productos'));
+    }
+
+
     public function error401(){
         return view('401');
     }
+
+
+
+
 
 }

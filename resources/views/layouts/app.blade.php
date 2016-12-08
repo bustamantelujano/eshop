@@ -98,12 +98,7 @@
 
                   
 
-                 <form class="navbar-form navbar-left" role="search">
-                    <div class="form-group">
-                      <input  id="$productos" type="text" class="form-control" name="clave" placeholder="Buscar">
-                    </div>
-                    <button  type="submit" class="btn btn-default">buscar<i class="glyphicon glyphicon-search"></i></button>
-                  </form>
+                 
 
 
 

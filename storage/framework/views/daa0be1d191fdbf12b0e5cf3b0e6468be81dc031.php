@@ -1,6 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
+<title> CVAshop </title>
 <head>
+    
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <link href='img/logoeshop.png' rel='shortcut icon' type='img/png' > 
     <meta charset="UTF-8">
     <script src="<?php echo e(asset("js/jquery.js")); ?>"></script>
     <link rel="stylesheet" href="<?php echo e(asset("css/bootstrap.css")); ?>">
@@ -17,6 +21,14 @@
     <!-- Styles -->
 
     <!-- Scripts -->
+    <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.8&appId=536720366533941";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
     <script>
         window.Laravel = <?php echo json_encode([
             'csrfToken' => csrf_token(),
@@ -34,7 +46,7 @@
 <script src="<?php echo e(url('/')); ?>/js/jquery-1.11.1.min.js"></script>
 <script src="<?php echo e(url('/')); ?>/js/bootstrap.js"></script>
 </head>
-<body>
+<body >
     
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
@@ -84,12 +96,9 @@
                     </li>
                   </ul>
 
-                 <form class="navbar-form navbar-left" role="search">
-                    <div class="form-group">
-                      <input type="text" class="form-control" placeholder="Buscar">
-                    </div>
-                    <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
-                  </form>
+                  
+
+                 
 
 
 
