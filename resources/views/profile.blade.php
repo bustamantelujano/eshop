@@ -6,7 +6,7 @@
 <table class="pg-empty-placeholder"></table>
 <div class="container">
     <ul class="nav nav-tabs">
-      <li class="active"><a href="#perfil" data-toggle="tab" aria-expanded="true">Mi perfil</a></li>
+      <li class="active"><a href="#producto" data-toggle="tab" aria-expanded="true">Detalle</a></li>
       <li class=""><a href="#compras" data-toggle="tab" aria-expanded="false">Mis Compras</a></li>
       
     </ul>
