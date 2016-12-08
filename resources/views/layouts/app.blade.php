@@ -96,6 +96,8 @@
                     </li>
                   </ul>
 
+                  
+
                  <form class="navbar-form navbar-left" role="search">
                     <div class="form-group">
                       <input  id="$productos" type="text" class="form-control" name="clave" placeholder="Buscar">
