@@ -2,7 +2,8 @@
 <html lang="en" >
 <title> CVAshop </title>
 <head>
-
+    
+    <script src='https://www.google.com/recaptcha/api.js'></script>
     <link href='img/logoeshop.png' rel='shortcut icon' type='img/png' > 
     <meta charset="UTF-8">
     <script src="{{ asset("js/jquery.js") }}"></script>

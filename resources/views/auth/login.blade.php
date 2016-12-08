@@ -39,6 +39,8 @@
                             </div>
                         </div>
 
+                        <div class="g-recaptcha" data-sitekey="6LegFA4UAAAAAGTztVxcpAZT8Lp8SGKVT7cJeNbR"></div>
+
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <div class="checkbox">
