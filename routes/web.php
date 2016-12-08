@@ -46,6 +46,12 @@ Route::group(['middleware' => ['auth','web']], function () { // Aquí se ponen l
 Route::group(['middleware' => ['auth','admin']], function () { // Aquí se ponen las rutas que solo pueden ser accesadas por usuarios registrados
 	Route::get ('/admin/dashboard', 'UserController@getAdminDashboard');
 
+	Route::get ('/admin/editararticulo/{clave}', 'UserController@getArticulo');
+	Route::post ('/admin/editararticulo/{clave}', 'UserController@actualizaArticulo');
+	Route::get ('/admin/agregararticulo', 'UserController@getagregarArticulo');
+	Route::post ('/admin/agregararticulo', 'UserController@agregarArticulo');
+
+
 	return "this page requires that you be logged in and an Admin"; 
 });
 

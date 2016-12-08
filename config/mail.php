@@ -29,7 +29,7 @@ return [
     |
     */
 
-    'host' => env('MAIL_HOST', 'smtp.gmail.com'),
+    'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
 
     /*
     |--------------------------------------------------------------------------
@@ -56,8 +56,8 @@ return [
     */
 
     'from' => [
-        'address' => 'cvaeshop@gmail.com',
-        'name' => 'cvaeshop',
+        'address' => 'hello@example.com',
+        'name' => 'Example',
     ],
 
     /*
@@ -111,5 +111,5 @@ return [
     */
 
     'sendmail' => '/usr/sbin/sendmail -bs',
-    
+
 ];
