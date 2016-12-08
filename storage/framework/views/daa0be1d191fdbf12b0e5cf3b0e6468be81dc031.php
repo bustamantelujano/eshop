@@ -15,7 +15,6 @@
     <title><?php echo e(config('app.name', 'CompraEnCVA')); ?></title>
 
     <!-- Styles -->
-    <link href="/css/app.css" rel="stylesheet">
 
     <!-- Scripts -->
     <script>
@@ -25,17 +24,13 @@
     </script>
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- css -->
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
-<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" media="all" />
 <!--// css -->
 <!-- font -->
 <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 <!-- //font -->
 
-<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
 <script src="js/jquery-1.11.1.min.js"></script>
 <script src="js/bootstrap.js"></script>
 </head>
@@ -171,10 +166,8 @@
     </div>
 
     <!-- Scripts -->
-    <script src="/js/app.js"></script>
     <?php echo $__env->yieldContent('scripts'); ?>
-<script type="text/javascript" src="Scripts/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="Scripts/bootstrap.min.js"></script>
+
 </body>
 <footer>
         <hr>

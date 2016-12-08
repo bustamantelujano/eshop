@@ -15,7 +15,6 @@
     <title>{{ config('app.name', 'CompraEnCVA') }}</title>
 
     <!-- Styles -->
-    <link href="/css/app.css" rel="stylesheet">
 
     <!-- Scripts -->
     <script>
@@ -25,9 +24,6 @@
     </script>
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- css -->
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
-<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" media="all" />
 <!--// css -->
 <!-- font -->
 <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
@@ -169,10 +165,8 @@
     </div>
 
     <!-- Scripts -->
-    <script src="/js/app.js"></script>
     @yield('scripts')
-<script type="text/javascript" src="Scripts/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="Scripts/bootstrap.min.js"></script>
+
 </body>
 <footer>
         <hr>

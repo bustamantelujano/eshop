@@ -74,9 +74,9 @@
                         <div class="panel-body" style="max-height: 140px">
                             <div  style="margin: 3px">
                                 <?php if(strlen("<?php echo e($p->imagen); ?>") < 20 ): ?>
-                            <img href="/<?php echo e($p->clave); ?>" src="http://www.adwore.com/images/propiedad/sinimagendisp.png" style="width:180px; height:180px; float:left; border-radius:5%; margin-right:25px;">
+                            <img href="<?php echo e(url('/producto')); ?>/<?php echo e($p->clave); ?>" src="http://www.adwore.com/images/propiedad/sinimagendisp.png" style="width:180px; height:180px; float:left; border-radius:5%; margin-right:25px;">
                                 <?php else: ?>
-                            <a href="producto/<?php echo e($p->clave); ?>">
+                            <a href="<?php echo e(url('/producto')); ?>/<?php echo e($p->clave); ?>">
                             <img href="" src="<?php echo e($p->imagen); ?>" style="width:150px; height:150px; float:left; border-radius:5%; margin-right:25px;">
                             </a>
                             <?php endif; ?>
