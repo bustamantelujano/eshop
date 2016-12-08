@@ -18,7 +18,6 @@
     <title>{{ config('app.name', 'CompraEnCVA') }}</title>
 
     <!-- Styles -->
-    <link href="/css/app.css" rel="stylesheet">
 
     <!-- Scripts -->
     <div id="fb-root"></div>
@@ -36,16 +35,15 @@
     </script>
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- css -->
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
-<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" media="all" />
 <!--// css -->
 <!-- font -->
 <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 <!-- //font -->
-<script src="js/jquery-1.11.1.min.js"></script>
-<script src="js/bootstrap.js"></script>
+
+
+<script src="{{url('/')}}/js/jquery-1.11.1.min.js"></script>
+<script src="{{url('/')}}/js/bootstrap.js"></script>
 </head>
 <body >
     
@@ -67,6 +65,35 @@
                     </a>
                 </div>
        
+                    <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Categorias <span class="caret"></span></a>
+                      <ul class="dropdown-menu" role="navigation">
+                        <li><a href="{{url('/categorias')}}/accesorios">Accesorios</a></li>
+                        <li><a href="{{url('/categorias')}}/audifonosmicro">Audífonos Y Micro</a></li>
+                        <li><a href="{{url('/categorias')}}/backpack">Back Pack(Mochila)</a></li>
+                        <li><a href="{{url('/categorias')}}/bocinas">Bocinas</a></li>
+                        <li><a href="{{url('/categorias')}}/camaras">Camaras</a></li>
+                        <li><a href="{{url('/categorias')}}/consumibles">Consumibles</a></li>
+                        <li><a href="{{url('/categorias')}}/discosduros">Discos Duros</a></li>
+                        <li><a href="{{url('/categorias')}}/energia">Energia</a></li>
+                        <li><a href="{{url('/categorias')}}/equiposaudio">Equipos de Audio</a></li>
+                        <li><a href="{{url('/categorias')}}/impresoras">Impresoras</a></li>
+                        <li><a href="{{url('/categorias')}}/memorias">Memorias</a></li>
+                        <li><a href="{{url('/categorias')}}/monitores">Monitores</a></li>
+                        <li><a href="{{url('/categorias')}}/multifuncionales">Multifuncionales</a></li>
+                        <li><a href="{{url('/categorias')}}/portatiles">Portatiles</a></li>
+                        <li><a href="{{url('/categorias')}}/procesadores">Procesadores</a></li>
+                        <li><a href="{{url('/categorias')}}/productoslimpieza">Productos de Limpieza</a></li>
+                        <li><a href="{{url('/categorias')}}/rack">Rack</a></li>
+                        <li><a href="{{url('/categorias')}}/software">Software</a></li>
+                        <li><a href="{{url('/categorias')}}/tabletas">Tabletas</a></li>
+                        <li><a href="{{url('/categorias')}}/tarjetamadre">Tarjeta Madre</a></li>
+                        <li><a href="{{url('/categorias')}}/tecladomouse">Teclado Y Mouse</a></li>
+
+                      </ul>
+                    </li>
+                  </ul>
 
                  <form class="navbar-form navbar-left" role="search">
                     <div class="form-group">
@@ -98,7 +125,7 @@
 
                         @if (!Auth::guest())
 
-                            <a href="/carrito">Carrito
+                            <a href="{{ url('/carrito') }}">Carrito
                                 <i class="glyphicon glyphicon-shopping-cart"></i>
                                 @if( Auth::user()->numitemssinpagar() != null)
                                     <span class="badge">
@@ -118,7 +145,7 @@
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="position:relative; padding-left:50px;">
-                                    <img src="/uploads/avatars/{{ Auth::user()->avatar }}" style="  width:32px; height:32px; position:absolute; top:15px; left:10px; border-radius:50%;">
+                                    <img src="{{ url('/uploads/avatars') }}/{{ Auth::user()->avatar }}" style="  width:32px; height:32px; position:absolute; top:15px; left:10px; border-radius:50%;">
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
@@ -149,7 +176,6 @@
     </div>
 
     <!-- Scripts -->
-    <script src="/js/app.js"></script>
     @yield('scripts')
 
 </body>

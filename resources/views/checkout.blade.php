@@ -84,7 +84,7 @@
 
                     </div>
                         <div class="modal-footer">
-                            <a href="/">
+                            <a href="{{url('/')}}">
                                 <button  type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
                             </a>
 
@@ -104,9 +104,4 @@
 
         </div>
     </div>
-@endsection
-
-@section('scripts')
-    <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
-    <script type="text/javascript" src="{{ URL::to('src/js/checkout.js') }}"></script>
 @endsection

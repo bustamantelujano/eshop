@@ -14,7 +14,7 @@
             <ul class="list-group">
                 @foreach($itemscarrito as $c)
                 <li class="list-group-item">
-                                <a href="/producto/{{$c->clave}}" class="text-left col-md-2" >
+                                <a href="{{url('/producto')}}/{{$c->clave}}" class="text-left col-md-2" >
                                     <img src="{{$c->imagen}}" style="width:100px; height:100px;  border-radius:5%; margin:5px; ">
                                 </a>               
 
@@ -29,7 +29,7 @@
                                 <div class=" col-md-10">
                                    <div>                
                                         <strong>
-                                            <a  href="/producto/{{$c->clave}}" style="font-size: 21px">{{ $c->descripcion }}</a>
+                                            <a  href="{{url('/producto')}}/{{$c->clave}}" style="font-size: 21px">{{ $c->descripcion }}</a>
                                         </strong>
                                         
                                         <div class="text-right" >
@@ -68,7 +68,7 @@
                     No hay artículos en el carrito
                     @else
                     <strong>Total: ${{$total}} Pesos</strong>
-                    <a href="/checkout" type="button" style="font-size: 26px" class="btn btn-success">Pasar a pagar 💵</a>
+                    <a href="{{url('/checkout')}}" type="button" style="font-size: 26px" class="btn btn-success">Pasar a pagar 💵</a>
 
                     @endif
                     </div>

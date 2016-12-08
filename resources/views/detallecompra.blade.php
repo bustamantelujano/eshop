@@ -32,7 +32,7 @@
                 <td> ${{$c->precio}}</td>
                   
                 <td>
-                    <a href="/producto/{{$c->codigoitem}}">
+                    <a href="{{url('/producto')}}/{{$c->codigoitem}}">
                         <button  class="btn btn-primary"> Detalle producto <span class="glyphicon glyphicon-th-list "></span></button>
                     </a>
                 </td>

@@ -58,7 +58,7 @@
                     <input type="submit" class="btn btn-primary" value="Actualizar">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
-                    <a href="'/user'" class="btn btn-danger">Cancelar</a>
+                    <a href="{{url('/user')}}" class="btn btn-danger">Cancelar</a>
                 </form>
             </div>
         </div>
