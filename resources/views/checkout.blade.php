@@ -7,6 +7,16 @@
         
         <div class="modal-dialog">
             <div class="modal-content">
+            <ul class="list-group">
+  <li class="list-group-item list-group-item-success">
+            <h2>Tarjeta de crédito o débito</h2>
+            <center>
+        <img src="img/banamex.jpg" width="100">
+        <img src="img/banorte.jpg" width="100">
+        <img src="img/santander.jpg" width="100">
+        <img src="img/inbursa.jpg" width="100">
+            </center>
+            </li>
                 <div class="modal-header">
                     <h2 class="modal-title">Tu compra</h2>
                     <h3 class="modal-title">Total: ${{ $total }} MXN</h3>
@@ -48,11 +58,11 @@
 
                                 </div>  
                                 <hr>
-                                
-                                <div class="col-xs-12">
+                                <img align="center" src="img/visa2.jpg" width="100">
+                                <div class="col-xs-8">
                                     <div class="form-group">
                                         <label for="card-number">Número de tarjeta</label>
-                                        <input type="text" id="card-number" class="form-control" required>
+                                        <input type="text" id="card-number" class="form-control"  required>
                                     </div>
                                 </div>
                                 <div class="col-xs-12">
@@ -71,10 +81,13 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xs-12">
+                                
+                                 <img align="center" src="img/visa.jpg" width="100">
+                                
+                                <div class="col-xs-6">
                                     <div class="form-group">
                                         <label for="card-cvc">CVC</label>
-                                        <input type="text" id="card-cvc" class="form-control" required>
+                                        <input type="text" id="card-cvc" class="form-control"  required>
                                     </div>
                                 </div>
                             </div>
