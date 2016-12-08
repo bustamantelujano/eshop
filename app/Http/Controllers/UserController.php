@@ -34,7 +34,8 @@ class UserController extends Controller{
     		$user->avatar = $filename;
     		$user->save();
     	}
-    	return view('profile', array('user' => Auth::user()) );
+    	$venta = $user->compras();
+        return view ('profile',  array('user' => Auth::user()), compact('venta'));
     }
         public function editprofile(){
         return view ('/editprofile', array('user' => Auth::user()));
@@ -54,7 +55,8 @@ class UserController extends Controller{
      //   dd($user);
         $user->save();
         
-        return view('profile' );
+        $venta = $user->compras();
+        return view ('profile',  array('user' => Auth::user()), compact('venta'));
     }
 
     public function getAdminDashboard(){
