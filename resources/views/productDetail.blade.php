@@ -2,7 +2,9 @@
 @section('content')
 <br><br><br>
 
-    <div class="container">
+    
+    <div class="container" >
+    <div class="jumbotron" >
 
         <h4>{{ $producto -> descripcion }}</h2>{{ $producto -> clave }}
         <img style="width:180px; height:180px; float:left; border-radius:5%; margin-right:25px;" src="{{ $producto -> imagen }}">
@@ -22,12 +24,15 @@
 
         </form> 
         <br><br><br><br><br><br>
+        <div class="fb-comments" data-href="http://localhost:8000/producto/$clave" data-numposts="5"></div>
       <!--
         <div class="alert alert-dismissible alert-success">
           <button type="button" class="close" data-dismiss="alert">&times;</button>
           <strong>Agregado a tu carrito</strong> para seguir comprando presiona  <a href="/" class="alert-link">aquí</a>.
         </div>
         -->
+        </div>
+    </div>
     </div>
 
 

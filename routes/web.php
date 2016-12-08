@@ -5,7 +5,8 @@ Auth::routes();
 //RUTAS PUBLICAS
 Route::get('/home', 'HomeController@index');
 Route::get('/', 'HomeController@index');
-Route::get('producto/{clave}', 'ProductosController@detalleProducto');
+Route::get('/producto/{clave}', 'ProductosController@detalleProducto');
+Route::get('/buscar/{clave}', 'ProductosController@buscar');
 
 Route::group(['middleware' => ['auth','web']], function () { // Aquí se ponen las rutas que solo pueden ser accesadas por usuarios registrados
   

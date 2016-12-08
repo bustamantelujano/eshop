@@ -27,7 +27,12 @@ class ProductosController extends Controller
 
     }
 
+    public function buscar($clave){
 
+        $producto = \DB::table('productos')->where('clave', $clave )->first();
+        return view('buscar');
+
+    }
 
 
 
