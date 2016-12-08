@@ -33,6 +33,8 @@
 <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 <!-- //font -->
+
+
 <script src="js/jquery-1.11.1.min.js"></script>
 <script src="js/bootstrap.js"></script>
 </head>
@@ -60,27 +62,27 @@
                     <li class="dropdown">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Categorias <span class="caret"></span></a>
                       <ul class="dropdown-menu" role="navigation">
-                        <li><a href="/categorias/accesorios">Accesorios</a></li>
-                        <li><a href="/categorias/audifonosmicro">Audífonos Y Micro</a></li>
-                        <li><a href="/categorias/backpack">Back Pack(Mochila)</a></li>
-                        <li><a href="/categorias/bocinas">Bocinas</a></li>
-                        <li><a href="/categorias/camaras">Camaras</a></li>
-                        <li><a href="/categorias/consumibles">Consumibles</a></li>
-                        <li><a href="/categorias/discosduros">Discos Duros</a></li>
-                        <li><a href="/categorias/energia">Energia</a></li>
-                        <li><a href="/categorias/equiposaudio">Equipos de Audio</a></li>
-                        <li><a href="/categorias/impresoras">Impresoras</a></li>
-                        <li><a href="/categorias/memorias">Memorias</a></li>
-                        <li><a href="/categorias/monitores">Monitores</a></li>
-                        <li><a href="/categorias/multifuncionales">Multifuncionales</a></li>
-                        <li><a href="/categorias/portatiles">Portatiles</a></li>
-                        <li><a href="/categorias/procesadores">Procesadores</a></li>
-                        <li><a href="/categorias/productoslimpieza">Productos de Limpieza</a></li>
-                        <li><a href="/categorias/rack">Rack</a></li>
-                        <li><a href="/categorias/software">Software</a></li>
-                        <li><a href="/categorias/tabletas">Tabletas</a></li>
-                        <li><a href="/categorias/tarjetamadre">Tarjeta Madre</a></li>
-                        <li><a href="/categorias/tecladomouse">Teclado Y Mouse</a></li>
+                        <li><a href="{{url('/categorias')}}/accesorios">Accesorios</a></li>
+                        <li><a href="{{url('/categorias')}}/audifonosmicro">Audífonos Y Micro</a></li>
+                        <li><a href="{{url('/categorias')}}/backpack">Back Pack(Mochila)</a></li>
+                        <li><a href="{{url('/categorias')}}/bocinas">Bocinas</a></li>
+                        <li><a href="{{url('/categorias')}}/camaras">Camaras</a></li>
+                        <li><a href="{{url('/categorias')}}/consumibles">Consumibles</a></li>
+                        <li><a href="{{url('/categorias')}}/discosduros">Discos Duros</a></li>
+                        <li><a href="{{url('/categorias')}}/energia">Energia</a></li>
+                        <li><a href="{{url('/categorias')}}/equiposaudio">Equipos de Audio</a></li>
+                        <li><a href="{{url('/categorias')}}/impresoras">Impresoras</a></li>
+                        <li><a href="{{url('/categorias')}}/memorias">Memorias</a></li>
+                        <li><a href="{{url('/categorias')}}/monitores">Monitores</a></li>
+                        <li><a href="{{url('/categorias')}}/multifuncionales">Multifuncionales</a></li>
+                        <li><a href="{{url('/categorias')}}/portatiles">Portatiles</a></li>
+                        <li><a href="{{url('/categorias')}}/procesadores">Procesadores</a></li>
+                        <li><a href="{{url('/categorias')}}/productoslimpieza">Productos de Limpieza</a></li>
+                        <li><a href="{{url('/categorias')}}/rack">Rack</a></li>
+                        <li><a href="{{url('/categorias')}}/software">Software</a></li>
+                        <li><a href="{{url('/categorias')}}/tabletas">Tabletas</a></li>
+                        <li><a href="{{url('/categorias')}}/tarjetamadre">Tarjeta Madre</a></li>
+                        <li><a href="{{url('/categorias')}}/tecladomouse">Teclado Y Mouse</a></li>
 
                       </ul>
                     </li>
@@ -116,7 +118,7 @@
 
                         @if (!Auth::guest())
 
-                            <a href="/carrito">Carrito
+                            <a href="{{ url('/carrito') }}">Carrito
                                 <i class="glyphicon glyphicon-shopping-cart"></i>
                                 @if( Auth::user()->numitemssinpagar() != null)
                                     <span class="badge">
@@ -136,7 +138,7 @@
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="position:relative; padding-left:50px;">
-                                    <img src="/uploads/avatars/{{ Auth::user()->avatar }}" style="  width:32px; height:32px; position:absolute; top:15px; left:10px; border-radius:50%;">
+                                    <img src="{{ url('/uploads/avatars') }}/{{ Auth::user()->avatar }}" style="  width:32px; height:32px; position:absolute; top:15px; left:10px; border-radius:50%;">
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
@@ -169,7 +171,8 @@
     <!-- Scripts -->
     <script src="/js/app.js"></script>
     @yield('scripts')
-
+<script type="text/javascript" src="Scripts/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="Scripts/bootstrap.min.js"></script>
 </body>
 <footer>
         <hr>

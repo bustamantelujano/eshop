@@ -33,6 +33,9 @@
 <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 <!-- //font -->
+
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script src="js/jquery-1.11.1.min.js"></script>
 <script src="js/bootstrap.js"></script>
 </head>
@@ -56,6 +59,35 @@
                     </a>
                 </div>
        
+                    <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Categorias <span class="caret"></span></a>
+                      <ul class="dropdown-menu" role="navigation">
+                        <li><a href="<?php echo e(url('/categorias')); ?>/accesorios">Accesorios</a></li>
+                        <li><a href="<?php echo e(url('/categorias')); ?>/audifonosmicro">Audífonos Y Micro</a></li>
+                        <li><a href="<?php echo e(url('/categorias')); ?>/backpack">Back Pack(Mochila)</a></li>
+                        <li><a href="<?php echo e(url('/categorias')); ?>/bocinas">Bocinas</a></li>
+                        <li><a href="<?php echo e(url('/categorias')); ?>/camaras">Camaras</a></li>
+                        <li><a href="<?php echo e(url('/categorias')); ?>/consumibles">Consumibles</a></li>
+                        <li><a href="<?php echo e(url('/categorias')); ?>/discosduros">Discos Duros</a></li>
+                        <li><a href="<?php echo e(url('/categorias')); ?>/energia">Energia</a></li>
+                        <li><a href="<?php echo e(url('/categorias')); ?>/equiposaudio">Equipos de Audio</a></li>
+                        <li><a href="<?php echo e(url('/categorias')); ?>/impresoras">Impresoras</a></li>
+                        <li><a href="<?php echo e(url('/categorias')); ?>/memorias">Memorias</a></li>
+                        <li><a href="<?php echo e(url('/categorias')); ?>/monitores">Monitores</a></li>
+                        <li><a href="<?php echo e(url('/categorias')); ?>/multifuncionales">Multifuncionales</a></li>
+                        <li><a href="<?php echo e(url('/categorias')); ?>/portatiles">Portatiles</a></li>
+                        <li><a href="<?php echo e(url('/categorias')); ?>/procesadores">Procesadores</a></li>
+                        <li><a href="<?php echo e(url('/categorias')); ?>/productoslimpieza">Productos de Limpieza</a></li>
+                        <li><a href="<?php echo e(url('/categorias')); ?>/rack">Rack</a></li>
+                        <li><a href="<?php echo e(url('/categorias')); ?>/software">Software</a></li>
+                        <li><a href="<?php echo e(url('/categorias')); ?>/tabletas">Tabletas</a></li>
+                        <li><a href="<?php echo e(url('/categorias')); ?>/tarjetamadre">Tarjeta Madre</a></li>
+                        <li><a href="<?php echo e(url('/categorias')); ?>/tecladomouse">Teclado Y Mouse</a></li>
+
+                      </ul>
+                    </li>
+                  </ul>
 
                  <form class="navbar-form navbar-left" role="search">
                     <div class="form-group">
@@ -87,7 +119,7 @@
 
                         <?php if(!Auth::guest()): ?>
 
-                            <a href="/carrito">Carrito
+                            <a href="<?php echo e(url('/carrito')); ?>">Carrito
                                 <i class="glyphicon glyphicon-shopping-cart"></i>
                                 <?php if( Auth::user()->numitemssinpagar() != null): ?>
                                     <span class="badge">
@@ -107,7 +139,7 @@
                         <?php else: ?>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="position:relative; padding-left:50px;">
-                                    <img src="/uploads/avatars/<?php echo e(Auth::user()->avatar); ?>" style="  width:32px; height:32px; position:absolute; top:15px; left:10px; border-radius:50%;">
+                                    <img src="<?php echo e(url('/uploads/avatars')); ?>/<?php echo e(Auth::user()->avatar); ?>" style="  width:32px; height:32px; position:absolute; top:15px; left:10px; border-radius:50%;">
                                     <?php echo e(Auth::user()->name); ?> <span class="caret"></span>
                                 </a>
 
@@ -141,7 +173,8 @@
     <!-- Scripts -->
     <script src="/js/app.js"></script>
     <?php echo $__env->yieldContent('scripts'); ?>
-
+<script type="text/javascript" src="Scripts/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="Scripts/bootstrap.min.js"></script>
 </body>
 <footer>
         <hr>
