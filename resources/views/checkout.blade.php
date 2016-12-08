@@ -12,7 +12,6 @@
             <h2>Tarjeta de crédito o débito</h2>
             <center>
         <img src="img/banamex.jpg" width="100">
-        <img src="img/banorte.jpg" width="72">
         <img src="img/santander.jpg" width="100">
         <img src="img/inbursa.jpg" width="100">
             </center>

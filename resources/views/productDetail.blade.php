@@ -4,8 +4,12 @@
 
     
     <div class="container" >
+     <ul class="nav nav-tabs">
+      <li class="active"><a href="#producto" data-toggle="tab" aria-expanded="true">Detalle</a></li>
+      <li class=""><a href="" data-toggle="tab" aria-expanded="false">Mis Compras</a></li>
+      
+    </ul>
     <div class="jumbotron" >
-
         <h4>{{ $producto -> descripcion }}</h2>{{ $producto -> clave }}
         <img style="width:180px; height:180px; float:left; border-radius:5%; margin-right:25px;" src="{{ $producto -> imagen }}">
 
@@ -23,6 +27,13 @@
 
 
         </form> 
+        
+        <div class="modal-footer">
+                            <a href="{{url('/')}}">
+                                <button  type="button" class="btn btn-danger" data-dismiss="modal">Seguir comprando</button>
+                            </a>
+                        </div>
+
         <br><br><br><br><br><br>
         <div class="fb-comments" data-href="http://localhost:8000/producto/$clave" data-numposts="5"></div>
       <!--
