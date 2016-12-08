@@ -75,9 +75,9 @@
                         <div class="panel-body" style="max-height: 140px">
                             <div  style="margin: 3px">
                                 @if (strlen("{{$p->imagen}}") < 20 )
-                            <img href="/{{$p->clave}}" src="http://www.adwore.com/images/propiedad/sinimagendisp.png" style="width:180px; height:180px; float:left; border-radius:5%; margin-right:25px;">
+                            <img href="{{url('/producto')}}/{{$p->clave}}" src="http://www.adwore.com/images/propiedad/sinimagendisp.png" style="width:180px; height:180px; float:left; border-radius:5%; margin-right:25px;">
                                 @else
-                            <a href="producto/{{$p->clave}}">
+                            <a href="{{url('/producto')}}/{{$p->clave}}">
                             <img href="" src="{{$p->imagen}}" style="width:150px; height:150px; float:left; border-radius:5%; margin-right:25px;">
                             </a>
                             @endif

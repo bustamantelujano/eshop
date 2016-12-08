@@ -15,7 +15,7 @@
 <div id="myTabContent" class="tab-content" >
   <div class="tab-pane fade active in" id="perfil">
         <div class="col-md-10 col-md-offset-1">
-            <img src="/uploads/avatars/{{ $user->avatar }}" style="width:150px; height:150px; float:left; border-radius:50%; margin-right:25px;">
+            <img src="{{url('/uploads/avatars')}}/{{ $user->avatar }}" style="width:150px; height:150px; float:left; border-radius:50%; margin-right:25px;">
             <h1>{{ $user->name }}</h1>
 
                 <fieldset>
@@ -105,7 +105,7 @@
                 <td style="text-align: center;"">{{$v->fecha}}</td>
                   
                 <td style="text-align: center;">
-                    <a href="/compra/{{$v->idrecibo}}">
+                    <a href="{{url('/compra')}}/{{$v->idrecibo}}">
                         <button  class="btn btn-primary"> Detalle de compra <span class="glyphicon glyphicon-th-list "></span></button>
                     </a>
                 </td>

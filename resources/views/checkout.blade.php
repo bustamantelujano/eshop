@@ -84,7 +84,7 @@
 
                     </div>
                         <div class="modal-footer">
-                            <a href="/">
+                            <a href="{{url('/')}}">
                                 <button  type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
                             </a>
 

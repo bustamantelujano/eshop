@@ -18,7 +18,7 @@
     
         <a class="h2" href="/">Ooops!</a>
         <a href="" type="button" style="font-size: 26px" class="btn btn-success">inicio</a>
-        <a href="/">   
+        <a href="{{url('/')}}">   
         </a> 
         <a class="p"  href="/"><strong>Error 401</strong> – No estás autorizado para entrar aquí 🤔</a>
     
