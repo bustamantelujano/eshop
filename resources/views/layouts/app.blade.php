@@ -55,6 +55,17 @@
                        CVAshop
                     </a>
                 </div>
+       
+
+                 <form class="navbar-form navbar-left" role="search">
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Buscar">
+                    </div>
+                    <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
+                  </form>
+
+
+
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
@@ -76,8 +87,13 @@
 
                         @if (!Auth::guest())
 
-                            <a href="/carrito">Carrito <i class="glyphicon glyphicon-shopping-cart"></i>
-                    
+                            <a href="/carrito">Carrito
+                                <i class="glyphicon glyphicon-shopping-cart"></i>
+                                @if( Auth::user()->numitemssinpagar() != null)
+                                    <span class="badge">
+                                        <strong>{{Auth::user()->numitemssinpagar()}}</strong>
+                                    </span>
+                                @endif
                              </a>   
                     
                         @endif
@@ -91,7 +107,7 @@
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="position:relative; padding-left:50px;">
-                                    <img src="/uploads/avatars/{{ Auth::user()->avatar }}" style="width:32px; height:32px; position:absolute; top:10px; left:10px; border-radius:50%;">
+                                    <img src="/uploads/avatars/{{ Auth::user()->avatar }}" style="  width:32px; height:32px; position:absolute; top:15px; left:10px; border-radius:50%;">
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
@@ -117,8 +133,7 @@
             </div>
         </nav>
 
-        <br><br><br><br>
-        @yield('content')
+        <br><br>        @yield('content')
         <br>
     </div>
 

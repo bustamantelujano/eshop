@@ -1,18 +1,19 @@
 @extends('layouts.app')
 @section('content')
+<br><br><br>
 
 
 <table class="pg-empty-placeholder"></table>
 <div class="container">
-  
-<ul class="nav nav-tabs">
-  <li class="active"><a href="#perfil" data-toggle="tab" aria-expanded="true">Mi perfil</a></li>
-  <li class=""><a href="#compras" data-toggle="tab" aria-expanded="false">Mis Compras</a></li>
-  
-</ul>
-<div id="myTabContent" class="tab-content">
+    <ul class="nav nav-tabs">
+      <li class="active"><a href="#perfil" data-toggle="tab" aria-expanded="true">Mi perfil</a></li>
+      <li class=""><a href="#compras" data-toggle="tab" aria-expanded="false">Mis Compras</a></li>
+      
+    </ul>
+<div class="jumbotron" style="min-height:600px">
+
+<div id="myTabContent" class="tab-content" >
   <div class="tab-pane fade active in" id="perfil">
-  <br><br><br>
         <div class="col-md-10 col-md-offset-1">
             <img src="/uploads/avatars/{{ $user->avatar }}" style="width:150px; height:150px; float:left; border-radius:50%; margin-right:25px;">
             <h1>{{ $user->name }}</h1>
@@ -60,6 +61,7 @@
                     </fieldset>
                     <br />
 
+                   
                     <br>
                     
                      <form action="/user/delete" method="POST">
@@ -69,6 +71,11 @@
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
                      </form> 
+                     <br>                    <br>
+                    <br>
+                    <br>
+                    <br>
+
                 </fieldset>
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
         </div>
@@ -82,9 +89,9 @@
           <thead>
             <tr>
               <th>ID de transacción</th>
-              <th>Número de artículos</th>
+              <th style="text-align: center;">Número de artículos</th>
               <th>Total</th>
-              <th>Fecha</th>
+              <th style="text-align: center;">Fecha</th>
               <th></th>
             </tr>
           </thead>
@@ -93,11 +100,11 @@
             @foreach($venta as $v)
             <tr>
                 <td>{{$v->idrecibo}}</td>
-                <td>{{$v->numitems}}</td>
+                <td style="text-align: center;" center;">{{$v->numitems}}</td>
                 <td>${{$v->total}}</td>
-                <td>{{$v->fecha}}</td>
+                <td style="text-align: center;"">{{$v->fecha}}</td>
                   
-                <td>
+                <td style="text-align: center;">
                     <a href="/compra/{{$v->idrecibo}}">
                         <button  class="btn btn-primary"> Detalle de compra <span class="glyphicon glyphicon-th-list "></span></button>
                     </a>
@@ -111,6 +118,7 @@
         </table> 
   </div>
   
+</div>
 </div>
     <div class="row">
         
@@ -129,6 +137,10 @@
             <a href="#" id="modalDeleteInfo" style="display:none" aria-label="ch-modal-7"></a>
         </form>
     </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
 </div>
 @endsection
 

@@ -1,7 +1,9 @@
 @extends('layouts.app')
 @section('content')
+<br><br><br>
 
     <div class="container">
+
         <h4>{{ $producto -> descripcion }}</h2>{{ $producto -> clave }}
         <img style="width:180px; height:180px; float:left; border-radius:5%; margin-right:25px;" src="{{ $producto -> imagen }}">
 
@@ -19,15 +21,19 @@
 
 
         </form> 
-        @if($agregado == 1)
         <br><br><br><br><br><br>
+      <!--
         <div class="alert alert-dismissible alert-success">
           <button type="button" class="close" data-dismiss="alert">&times;</button>
           <strong>Agregado a tu carrito</strong> para seguir comprando presiona  <a href="/" class="alert-link">aquí</a>.
         </div>
-        @endif
-
+        -->
     </div>
+
+
+@endsection
+
+    @yield('scripts')
 
 <script type="text/javascript">
     function post(){
@@ -47,4 +53,3 @@
         );
     }
 </script>
-@endsection

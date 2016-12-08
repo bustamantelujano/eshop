@@ -18,7 +18,8 @@ class HomeController extends Controller
      */
     public function index() {
         $productos=DB::table('productos')->paginate(12);
-        return view('welcome', compact('productos'));
+
+        return view('welcome', compact('productos' ));
     }
     
     public function getCompra($idcompra){

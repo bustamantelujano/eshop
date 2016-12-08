@@ -3,6 +3,7 @@
 
 
 @if( $itemscarrito != null )
+<br><br><br>
 
 
     <form>
@@ -25,7 +26,7 @@
                                     @endif
 
                                 </span>
-                                <div class=" col-md-10"> 
+                                <div class=" col-md-10">
                                    <div>                
                                         <strong>
                                             <a  href="/producto/{{$c->clave}}" style="font-size: 21px">{{ $c->descripcion }}</a>

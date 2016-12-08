@@ -32,10 +32,11 @@ class User extends Authenticatable
             ->where([['idcliente', '=',  $this->id],['idcompra', '=', null ] ] )
             ->select(DB::raw(' Sum(cantidad) as totalitems'))
             ->first();
-
             return $items->totalitems;
 
     }
+
+
     public function compras(){
         $venta = DB::table('venta')
             ->where('idcliente', '=',  $this->id )

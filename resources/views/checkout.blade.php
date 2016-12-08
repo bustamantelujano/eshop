@@ -1,68 +1,107 @@
 @extends('layouts.app')
 @section('content')
-
+<br><br><br>
 
     <div class="row">
-        <div class="col-sm-6 col-md-4 col-md-offset-4 col-sm-offset-3">
-            <h1>Tu compra</h1>
-            <h3>Total: ${{ $total }} MXN</h3>
-            <div id="charge-error" class="alert alert-danger {{ !Session::has('error') ? 'hidden' : ''  }}">
-                {{ Session::get('error') }}
-            </div>
-            <form action="/checkout" method="post" id="checkout-form">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="form-group">
-                            <label for="name">Nombre</label>
-                            <input type="text" id="name" class="form-control" required name="name" value="{{Auth::user()->name}}">
-                        </div>
-                    </div>
-                    <div class="col-xs-12">
-                        <div class="form-group">
-                            <label for="address">Dirección</label>
-                            <input type="text" id="address" class="form-control" required name="address" value="{{Auth::user()->direccion}}">
-                        </div>
-                    </div>
-                    <div class="col-xs-12">
-                        <div class="form-group">
-                            <label for="tel">Telefono</label>
-                            <input type="text" id="tel" class="form-control" required name="tel" value="{{Auth::user()->telefono}}">
-                        </div>
-                    </div>
-                    <hr>
-                    
-                    <div class="col-xs-12">
-                        <div class="form-group">
-                            <label for="card-number">Número de tarjeta</label>
-                            <input type="text" id="card-number" class="form-control" required>
-                        </div>
-                    </div>
-                    <div class="col-xs-12">
-                        <div class="row">
-                            <div class="col-xs-6">
-                                <div class="form-group">
-                                    <label for="card-expiry-month">Mes de expiración</label>
-                                    <input type="text" id="card-expiry-month" class="form-control" required>
-                                </div>
-                            </div>
-                            <div class="col-xs-6">
-                                <div class="form-group">
-                                    <label for="card-expiry-year">Año de expiración</label>
-                                    <input type="text" id="card-expiry-year" class="form-control" required>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12">
-                        <div class="form-group">
-                            <label for="card-cvc">CVC</label>
-                            <input type="text" id="card-cvc" class="form-control" required>
-                        </div>
-                    </div>
+    <div class="col-sm-6 col-md-4 col-md-offset-4 col-sm-offset-3">
+        
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Tu compra</h2>
+                    <h3 class="modal-title">Total: ${{ $total }} MXN</h3>
                 </div>
-                {{ csrf_field() }}
-                <button type="submit" class="btn btn-success">Pagar ahora</button>
-            </form>
+                <div class="modal-body">
+                    
+
+                    <form action="/checkout" method="post" id="checkout-form">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <label for="name">Nombre</label>
+                                    <input type="text" id="name" class="form-control" required name="name" value="{{Auth::user()->name}}">
+                                </div>
+                            </div>
+                        <div class="col-xs-11">
+                                <div class="form-group">
+                                     <label for="address">Dirección</label>
+                                        <input type="text" id="address" class="form-control" required name="address" value="{{Auth::user()->direccion}}">
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div class="col-xs-9">
+                                        <div class="form-group">
+                                            <label for="tel">Telefono</label>
+                                            <input type="text" id="tel" class="form-control" required name="tel" value="{{Auth::user()->telefono}}">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="form-group">
+                                            <div class="checkbox">
+                                            <br>
+                                              <label>
+                                                <input type="checkbox" value="true" checked id="recibosms"> Recibo SMS
+                                              </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>  
+                                <hr>
+                                
+                                <div class="col-xs-12">
+                                    <div class="form-group">
+                                        <label for="card-number">Número de tarjeta</label>
+                                        <input type="text" id="card-number" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                            <div class="form-group">
+                                                <label for="card-expiry-month">Mes de expiración</label>
+                                                <input type="text" id="card-expiry-month" class="form-control" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <div class="form-group">
+                                                <label for="card-expiry-year">Año de expiración</label>
+                                                <input type="text" id="card-expiry-year" class="form-control" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div class="form-group">
+                                        <label for="card-cvc">CVC</label>
+                                        <input type="text" id="card-cvc" class="form-control" required>
+                                    </div>
+                                </div>
+                            </div>
+                            {{ csrf_field() }}
+                        
+
+
+                    </div>
+                        <div class="modal-footer">
+                            <a href="/">
+                                <button  type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                            </a>
+
+                            <button type="submit" class="btn btn-primary">Pagar ahora</button>
+
+                        </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+
+
+
+
+
+
+
         </div>
     </div>
 @endsection

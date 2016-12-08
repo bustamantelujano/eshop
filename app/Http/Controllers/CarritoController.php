@@ -30,8 +30,13 @@ class CarritoController extends Controller
        return Redirect('/carrito');
     }
 
+    public function quitadeexistencia($numitems, $clave){
+
+    	return;
+    }
         public function additem(Request $request){ 
         $user = Auth::user();
+
         $clave =  $request->input('clave');
         $itemsconclave = DB::table('carritos')
             ->where([['carritos.codigoitem', '=',  $clave ] ,['carritos.idcliente', '=', $user->id ],['carritos.idcompra','=',null]])
@@ -59,10 +64,9 @@ class CarritoController extends Controller
             }
             $arreglo = array();
             $arreglo["validado"] = true;
-            $agregado = true;
             $producto = DB::table('productos')->where('clave', $clave )->first();
 
-        return view('productDetail', compact('producto','agregado'));
+        return redirect('producto/'.$clave)->with('mensaje','Producto agregado a tu carrito');
     }
 
      public function getCheckout() {
@@ -94,9 +98,6 @@ class CarritoController extends Controller
 				"description" => "Cargo de CVAshop"
 			));
 
-
-
-
 			//$compras
 
         } catch (\Exception $e) {
@@ -106,9 +107,7 @@ class CarritoController extends Controller
 
 
 		$idcompra = $user->guardacompra();
-		//$compras = $user->compras();
-		$linkrecibo = '/compra/'.$idcompra; 
-        // Session::forget('cart');
-        return redirect($linkrecibo);
+
+        return redirect('/compra/'.$idcompra);
     }
 }

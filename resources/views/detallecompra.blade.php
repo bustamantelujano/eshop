@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
+<br><br><br>
 
 <table class="pg-empty-placeholder"></table>
 <div class="container">
@@ -26,8 +27,8 @@
                 <td> {{$c->codigoitem}}</td>
                 <td> {{$c->descripcion}}</td>
                 <td> {{$c->marca}}</td>
-                <td>${{$c->cantidad}}</td>
-                <td> {{$c->precio}}</td>
+                <td> {{$c->cantidad}}</td>
+                <td> ${{$c->precio}}</td>
                   
                 <td>
                     <a href="/producto/{{$c->codigoitem}}">
