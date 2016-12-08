@@ -56,6 +56,35 @@
                     </a>
                 </div>
        
+                    <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Categorias <span class="caret"></span></a>
+                      <ul class="dropdown-menu" role="navigation">
+                        <li><a href="/categorias/accesorios">Accesorios</a></li>
+                        <li><a href="/categorias/audifonosmicro">Audífonos Y Micro</a></li>
+                        <li><a href="/categorias/backpack">Back Pack(Mochila)</a></li>
+                        <li><a href="/categorias/bocinas">Bocinas</a></li>
+                        <li><a href="/categorias/camaras">Camaras</a></li>
+                        <li><a href="/categorias/consumibles">Consumibles</a></li>
+                        <li><a href="/categorias/discosduros">Discos Duros</a></li>
+                        <li><a href="/categorias/energia">Energia</a></li>
+                        <li><a href="/categorias/equiposaudio">Equipos de Audio</a></li>
+                        <li><a href="/categorias/impresoras">Impresoras</a></li>
+                        <li><a href="/categorias/memorias">Memorias</a></li>
+                        <li><a href="/categorias/monitores">Monitores</a></li>
+                        <li><a href="/categorias/multifuncionales">Multifuncionales</a></li>
+                        <li><a href="/categorias/portatiles">Portatiles</a></li>
+                        <li><a href="/categorias/procesadores">Procesadores</a></li>
+                        <li><a href="/categorias/productoslimpieza">Productos de Limpieza</a></li>
+                        <li><a href="/categorias/rack">Rack</a></li>
+                        <li><a href="/categorias/software">Software</a></li>
+                        <li><a href="/categorias/tabletas">Tabletas</a></li>
+                        <li><a href="/categorias/tarjetamadre">Tarjeta Madre</a></li>
+                        <li><a href="/categorias/tecladomouse">Teclado Y Mouse</a></li>
+
+                      </ul>
+                    </li>
+                  </ul>
 
                  <form class="navbar-form navbar-left" role="search">
                     <div class="form-group">

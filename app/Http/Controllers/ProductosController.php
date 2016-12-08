@@ -27,7 +27,10 @@ class ProductosController extends Controller
 
     }
 
-
+    public function getResultado($categoria) {
+        $productos=DB::table('productos')->where('grupo', $categoria )->paginate(12);
+        return view('resultados', compact('productos' ));
+    }
 
 
 
