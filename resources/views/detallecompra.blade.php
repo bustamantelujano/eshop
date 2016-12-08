@@ -40,10 +40,15 @@
             </tr>
             @endforeach
 
-
           </tbody>
         </table> 
   </div>
+               <div class="modal-footer">
+                <a href="{{url('/user')}}">
+                    <button  type="button" class="btn btn-danger" data-dismiss="modal">Regresar</button>
+                </a>
+            </div>
+
   
 </div>
     <div class="row">

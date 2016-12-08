@@ -54,6 +54,7 @@
 
         <!-- Fonts -->
          <div class="container"> 
+         <div class="jumbotron">
             <div class="row" >
                     <!--Empieza panel-->
                     @foreach($productos as $p)
