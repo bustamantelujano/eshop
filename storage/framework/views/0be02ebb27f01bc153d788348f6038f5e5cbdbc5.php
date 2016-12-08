@@ -52,6 +52,7 @@
 
         <!-- Fonts -->
          <div class="container"> 
+         <div class="jumbotron">
             <div class="row" >
                     <!--Empieza panel-->
                     <?php $__currentLoopData = $productos; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $p): $__env->incrementLoopIndices(); $loop = $__env->getFirstLoop(); ?>

@@ -2,11 +2,9 @@
 
 namespace App\Http\Controllers;
 use App\productos;
-
 use Illuminate\Http\Request;
 use DB;
-class HomeController extends Controller
-{
+class HomeController extends Controller{
     /**
      * Create a new controller instance.
      *
@@ -29,7 +27,7 @@ class HomeController extends Controller
                      inner join productos as p on p.clave = c.codigoitem 
                      where v.idrecibo = ?'
                      ,[$idcompra]
-                     );
+                     ); 
         return view('detallecompra', compact('Compra', 'idcompra'));
     }
     
