@@ -5,8 +5,8 @@
     
     <div class="container" >
      <ul class="nav nav-tabs">
-      <li class="active"><a href="#producto" data-toggle="tab" aria-expanded="true">Detalle</a></li>
-      <li class=""><a href="" data-toggle="tab" aria-expanded="false">Mis Compras</a></li>
+      <li class="active"><a href="#producto" data-toggle="tab" aria-expanded="true">Detalle del producto</a></li>
+      <li class=""><a href="/comentarios" data-toggle="tab" aria-expanded="false">comentarios</a></li>
       
     </ul>
     <div class="jumbotron" >
@@ -35,14 +35,13 @@
                         </div>
 
         <br><br><br><br><br><br>
-        <div class="fb-comments" data-href="http://localhost:8000/producto/$clave" data-numposts="5"></div>
-      <!--
+        <div class="fb-comments" data-href="" data-numposts="5"></div>      <!--
         <div class="alert alert-dismissible alert-success">
           <button type="button" class="close" data-dismiss="alert">&times;</button>
           <strong>Agregado a tu carrito</strong> para seguir comprando presiona  <a href="/" class="alert-link">aquí</a>.
         </div>
         -->
-        </div>
+        
     </div>
     </div>
 
