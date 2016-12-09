@@ -22,6 +22,7 @@ class UserController extends Controller{
         $user = Auth::user();
         $user->delete();
         return Redirect::route('/home');
+        return Redirect()->route('login');
     }
 
     public function update_avatar(Request $request){
