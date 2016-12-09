@@ -64,8 +64,13 @@
                     <!--Termina panel-->
                     @endforeach
 
-    {!! $productos->render() !!}
-           
              </div> 
+           
         </div>     
+
+        <div class="col-xs-12">
+                {!! $productos->render() !!}
+
+            
+        </div>
 @endsection
