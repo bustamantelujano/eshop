@@ -35,7 +35,7 @@
                         </div>
 
         <br><br><br><br><br><br>
-        <div class="fb-comments" data-href="http://cvashop.herokuapp.com/producto" data-numposts="5" data-mobile=""></div>      <!--
+        <div class="fb-comments"  data-numposts="5" data-mobile=""></div>      <!--
         <div class="alert alert-dismissible alert-success">
           <button type="button" class="close" data-dismiss="alert">&times;</button>
           <strong>Agregado a tu carrito</strong> para seguir comprando presiona  <a href="/" class="alert-link">aquí</a>.
