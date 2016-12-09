@@ -68,7 +68,7 @@
                     No hay artículos en el carrito
                     @else
                     <strong>Total: ${{$total}} Pesos</strong>
-                    <a href="{{url('/checkout')}}" type="button" style="font-size: 26px" class="btn btn-success">Pasar a pagar 💵</a>
+                    <a href="{{url('/checkout')}}" type="button" style="font-size: 26px" class="btn btn-success">Pagar</a>
 
                     @endif
                     </div>
