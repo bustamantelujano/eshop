@@ -50,8 +50,6 @@
 
 
 
-<br><br>
-
         <!-- Fonts -->
          <div class="container"> 
          <div class="jumbotron">
@@ -83,10 +81,10 @@
                             </a>
                             @endif
                             <span style="font-size: 10px ;"">
-                                @if (strlen("{{$p->ficha_comercial}}") > 140 )
-                                    {{substr($p->ficha_comercial,0,140)}}...</span>
+                                @if (strlen("{{$p->descripcion}}") > 140 )
+                                    {{substr($p->descripcion,0,140)}}...</span>
                                 @else
-                                    {{$p->ficha_comercial}}
+                                    {{$p->descripcion}}
                                 @endif
                             
                             </div>

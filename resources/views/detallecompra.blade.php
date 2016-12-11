@@ -4,8 +4,22 @@
 
 <br><br><br>
 
+
 <table class="pg-empty-placeholder"></table>
 <div class="container">
+
+
+    @if (session('mensaje'))
+    <br>
+
+        <div class="alert alert-dismissible alert-success">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <h4>{{ session('mensaje') }}</h4>
+    </div>
+    @endif
+
+
+
   
     <div class="col-md-10" style="align-content: center;">
                     <h2>Folio de compra: {{$idcompra}}</h2>

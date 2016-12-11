@@ -48,8 +48,6 @@
 
 
 
-<br><br>
-
         <!-- Fonts -->
          <div class="container"> 
          <div class="jumbotron">
@@ -82,10 +80,10 @@
                             </a>
                             <?php endif; ?>
                             <span style="font-size: 10px ;"">
-                                <?php if(strlen("<?php echo e($p->ficha_comercial); ?>") > 140 ): ?>
-                                    <?php echo e(substr($p->ficha_comercial,0,140)); ?>...</span>
+                                <?php if(strlen("<?php echo e($p->descripcion); ?>") > 140 ): ?>
+                                    <?php echo e(substr($p->descripcion,0,140)); ?>...</span>
                                 <?php else: ?>
-                                    <?php echo e($p->ficha_comercial); ?>
+                                    <?php echo e($p->descripcion); ?>
 
                                 <?php endif; ?>
                             

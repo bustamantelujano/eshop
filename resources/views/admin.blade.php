@@ -84,7 +84,22 @@
   <div class="tab-pane fade" id="articulos">
             <div class="col-md-10" style="align-content: center;">
 
-                    <h2>Mis artículos  </h2>
+                    <h2>Mis artículos 
+
+                    <a href="{{url('/compra')}}/{{$v->idrecibo}}">
+                        <button  class="btn btn-primary"> <i class="glyphicon glyphicon-plus"></i></button>
+                    </a>
+
+                    <a href="{{url('/compra')}}/{{$v->idrecibo}}" class="pull-right">
+                        <button  class="btn btn-primary"> Agregar desde CSV <i class="glyphicon glyphicon-upload"></i></button>
+                    </a>
+                    <a href="{{url('/compra')}}/{{$v->idrecibo}}" class="pull-right">
+                        <button  class="btn btn-primary"> Conectar con CVA <i class="glyphicon glyphicon-cloud"></i></button>
+                    </a>
+
+                     </h2>
+
+
                 </div>
 
         <table class="table table-striped table-hover ">
@@ -104,19 +119,19 @@
           <tbody>
             @foreach($productos as $p)
             @if($p->disponible > 0 )
+
                 <tr >
                     <td style="text-align: center;" center;">{{$p->clave}}</td>
                     <td style="text-align: center;" center;">{{$p->descripcion}}</td>
                     <td style="text-align: center;" center;">{{$p->marca}}</td>
-                    <td style="text-align: center;" center;">${{$p->grupo}}</td>
-                    <td style="text-align: center;" center;">{{$p->precio}}</td>
+                    <td style="text-align: center;" center;">{{$p->grupo}}</td>
+                    <td style="text-align: center;" center;">${{$p->precio}}</td>
                     <td style="text-align: center;" center;">{{$p->disponible}}</td>
                     <td style="text-align: center;">
                         <a href="{{url('/admin/editararticulo')}}/{{$p->clave}}">
                             <button  class="btn btn-primary"> Editar <span class="glyphicon glyphicon-pencil "></span></button>
                         </a>
                     </td>
-                  
                 </tr>
             @else  
                 <tr class="danger">

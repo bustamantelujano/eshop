@@ -82,6 +82,15 @@ class CarritoController extends Controller
     	if(strlen($user->telefono) < 10){
     		$user->agregatelefono($request->input('tel'));
     	}
+        //dd($user->activado );
+        if ($user->activado == 0 ) {
+            
+            $mensaje = "";
+           return view('401');
+            //return view('error', compact('mensaje'));
+
+        }
+
         Stripe::setApiKey('sk_test_pUcnpeWTGArzktGqFTe8SoTE');
 
         try {
@@ -107,7 +116,6 @@ class CarritoController extends Controller
 
 
 		$idcompra = $user->guardacompra();
-
-        return redirect('/compra/'.$idcompra);
+        return redirect('/compra/'.$idcompra)->with('mensaje','Tu compra fue procesada exitosamente');
     }
 }

@@ -9,7 +9,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<br><br>
+<br><br><br> <br>
 
         <!-- Fonts -->
          <div class="container"> 
@@ -71,6 +71,6 @@
         <div class="col-xs-12">
                 {!! $productos->render() !!}
 
-            
+
         </div>
 @endsection

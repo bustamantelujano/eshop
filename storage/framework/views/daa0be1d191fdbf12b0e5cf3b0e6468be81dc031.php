@@ -47,6 +47,35 @@
 <script src="<?php echo e(url('/')); ?>/js/bootstrap.js"></script>
 </head>
 <body >
+
+
+        <?php if(!Auth::guest()): ?>
+            <?php if(Auth::user()->activado == false): ?>
+            <br><br><br><br>
+        <div class="container">
+            <div class="alert alert-dismissible alert-info">
+              <button type="button" class="close" data-dismiss="alert">&times;</button>
+              <h4>Confirma tu correo</h4>
+              <p>Te enviamos un correo a <strong><?php echo e(Auth::user()->email); ?></strong>, activa tu cuenta para seguir comprando, si no te llegó, presiona <a href="google.com"><strong>aquí</strong></a> para enviarlo otra vez.</p>
+            </div>
+        </div>
+            <?php endif; ?>
+        <?php endif; ?>
+  
+
+    <style type="text/css">
+      
+      body{
+        padding:10px;
+      }
+
+      .show-on-hover:hover > ul.dropdown-menu {
+        display: block;    
+      }
+
+    </style>
+
+
     
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
@@ -67,7 +96,7 @@
                 </div>
        
                     <ul class="nav navbar-nav">
-                    <li class="dropdown">
+                    <li class="dropdown btn-group show-on-hover" >
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Categorias <span class="caret"></span></a>
                       <ul class="dropdown-menu" role="navigation">
                         <li><a href="<?php echo e(url('/categorias')); ?>/accesorios">Accesorios</a></li>
@@ -115,7 +144,7 @@
                     <li>
                         
                         <?php if(!Auth::guest() && Auth::user()->isAdmin() ): ?>
-                        <a href="<?php echo e(url('/admin/dashboard')); ?>">Dashboard</a>
+                        <a href="<?php echo e(url('/admin/dashboard')); ?>">Panel de administrador <i class="glyphicon glyphicon-dashboard"></i></a>
                         <?php endif; ?>
                     </li>
                     <li>
@@ -135,13 +164,14 @@
                         <?php endif; ?>
                     </li>
 
-                    <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav navbar-right " >
+
                         <!-- Authentication Links -->
                         <?php if(Auth::guest()): ?>
                             <li><a href="<?php echo e(url('/login')); ?>">Iniciar Sesión</a></li>
                             <li><a href="<?php echo e(url('/register')); ?>">Regístrate</a></li>
                         <?php else: ?>
-                            <li class="dropdown">
+                            <li class="dropdown  btn-group show-on-hover">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="position:relative; padding-left:50px;">
                                     <img src="<?php echo e(url('/uploads/avatars')); ?>/<?php echo e(Auth::user()->avatar); ?>" style="  width:32px; height:32px; position:absolute; top:15px; left:10px; border-radius:50%;">
                                     <?php echo e(Auth::user()->name); ?> <span class="caret"></span>
@@ -169,8 +199,11 @@
                 </div>
             </div>
         </nav>
-
-        <br><br>        <?php echo $__env->yieldContent('content'); ?>
+        <?php if(Auth::guest()): ?>
+              <br><br>  
+        <?php endif; ?>
+             
+         <?php echo $__env->yieldContent('content'); ?>
         <br>
     </div>
 
