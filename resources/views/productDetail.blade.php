@@ -40,8 +40,8 @@
                             <table width="100%">
                                 <tr style="display:none" class="sku-item"><td width="50%">SKU</td><td width="50%" class='sku'></td></tr>
                             </table>
-                            <h4 class="unico">Art&iacute;culo &uacute;nico</h4>
-                            <h4 class="digital"><i class="fa fa-qrcode"></i> Contenido digital</h4>
+                            <h4 class="unico">Precio: ${{$producto->precio}}</h4>
+                            <h4 class="digital"> </h4>
                         </div>
 
                         <h4>Disponibles: {{$producto->disponible}}</h4>
@@ -49,8 +49,8 @@
                         <form action="/carrito" method="post" style="margin: 12px">
                             
                         @if($producto->disponible == 0)
-                            <button class="btn btn-danger" type="" style="font-size: 20px" disabled="true">
-                                Agotado <span class= "glyphicon glyphicon-shopping-cart"></span> 
+                            <button class="btn btn-danger" type="" style="font-size: 20px" >
+                                Agotado </span> 
                             </button>
                         @else
                             <button class="btn btn-success" type="submit" style="font-size: 20px">
